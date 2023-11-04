@@ -1,5 +1,5 @@
 # Seminario_OierDiego
-# Título Principal
+# Título Principal: Salud en Zonas de Alta Altitud y Adaptación Fisiológica.
 
 ## Descripción del Proyecto
 
