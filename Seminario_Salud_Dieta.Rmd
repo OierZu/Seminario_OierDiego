@@ -20,5 +20,11 @@ output:
 ```{r}
 library(readxl)
 datos_diabetes <- read_excel("diabetes.xlsx")
-head(datos_diabetes)
+head(datos_diabetes) 
+
+  Aqui importamos otro excel, este con datos de la obsidad en la poblacion por sexo;
+
+datos_obesidad <- read_excel("obesidad.xlsx")
+
+head(datos_obesidad)
 
