@@ -1,4 +1,24 @@
-# Seminario_OierDiego
+---
+  title: "Salud y enfermedades relacionadas con la dieta"
+author:
+  - Oier Zuñiga
+- Diego Ramirez
+date: "`r format(Sys.Date(), '%d de %B de %Y')`"
+output:
+  html_document:
+  toc: true
+---
+## ¿De que trata el informe?
+  
+  La obesidad es un problema de salud pública que ha alcanzado proporciones epidémicas en todo el mundo. Este informe se centra en explorar la relación entre la obesidad y la salud, así como en analizar datos relevantes.
+  
+## Algunos datos que hemos obtendio y sus bases de datos de origen
 
-La obesidad es un problema de salud pública que ha alcanzado proporciones epidémicas en todo el mundo. Este informe se centra en explorar la relación entre la obesidad y la salud, así como en analizar datos relevantes.
+  Este primer excel proviene de la base de datos del govierno datos.gob, en este podemos ver la relación entre la diabetes y la mortalidad que esta provoca.
+  Aqui dejamos el url para que podais comprobarlo si quereis;
+  https://datos.gob.es/es/catalogo/a16003011-tasa-de-mortalidad-atribuida-a-la-diabetes-por-territorio-historico-y-sexo-indicadores-de-la-agenda-2030-c-a-de-euskadi1
+```{r}
+library(readxl)
+datos_diabetes <- read_excel("diabetes.xlsx")
+head(datos_diabetes)
 
