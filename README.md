@@ -1,5 +1,3 @@
-<<<<<<< HEAD
 # Seminario_OierDiego
 =======
-
->>>>>>> 5a63d453ec08409447caeec5a769d2b741a7f33c
+La obesidad es un problema de salud pública que ha alcanzado proporciones epidémicas en todo el mundo. Este informe se centra en explorar la relación entre la obesidad y la salud, así como en analizar datos relevantes.
