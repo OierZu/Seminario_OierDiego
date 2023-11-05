@@ -1,5 +1,5 @@
 # Seminario_OierDiego
-# Título: Salud en Zonas de Alta Altitud y Adaptación Fisiológica.
+# Título: Salud humana y enfermedades relacionadas con la dieta.
 
 ## Descripción del Proyecto 
 
