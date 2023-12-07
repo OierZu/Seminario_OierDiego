@@ -1,19 +1,22 @@
-#¿De que va el proyecto?
+# Investigación sobre la SALUD y las ENFERMEDADES relacionadas con la DIETA
 
-  Investigar y obtener informacíon sobre las enfermedades y problemas generados a partir de las dietas .
+Trabajo realizado por Oier Zuñiga y Diego Ramirez
 
-##Información
+![Portada](/Fuentes/Seminario_OierDiego/Portada.jpeg)
 
-  Para este proyecto vamos a recopilar información de distintas bases de datos para obtener un estudio mas completo sobre este tema y los problemas que genera en la salud humana.
-  
-###Algunos links de los que hemos obtenido información
+## ¿Sobre qué trata nuestra investigación?
 
-https://catalog.data.gov/dataset/?q=hypertension&sort=views_recent+desc&res_format=CSV&ext_location=&ext_bbox=&ext_prev_extent=&tags=hypertension
+En este proyecto, intentaremos relacionar y buscar información sobre algunas enfermedades vinculadas con la dieta, como la obesidad o la diabetes tipo 2.
 
-https://www.niddk.nih.gov/
+Para ello, proporcionaremos datos y estadísticas relacionadas con ambas enfermedades, junto con otros factores que pueden favorecer su aparición.
 
-https://www.niddk.nih.gov/
+Nos centraremos en 3 OBJETIVOS PRINCIPALES.
 
-https://www.data.gov/
+### OBJETIVOS PRINCIPALES
 
-https://www.opendatasoft.com/
+-   Objetivo 1
+    -   x1
+-   Objetivo 2
+    -   x2
+-   Objetivo 3
+    -   x3
