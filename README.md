@@ -21,15 +21,15 @@ Nos centraremos en **3 OBJETIVOS PRINCIPALES.**
 
 **Objetivo 1**
 
-:   x1
+:   Relación entre el deporte y la salud física.
 
 **Objetivo 2**
 
-:   x2
+:   Relación entre la obesidad y los establecimientos de comida rápida.
 
 **Objetivo 3**
 
-:   x3
+:   Relación entre Diabetes e Hipertensión.
 
 ### Bibliografía [📰](https://emojipedia.org/shortcodes)
 
