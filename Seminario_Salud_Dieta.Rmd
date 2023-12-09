@@ -6,14 +6,16 @@ author:
 date: "`r format(Sys.Date(), '%d de %B de %Y')`"
 output:
   html_document:
-  toc: true
-  toc_float: 
-    collapsed: false
-    smooth_scroll: false
-  toc_depth: 2
+    theme: united 
+    highlight: tango
+    number_sections: true
+    toc: true
+      toc_float: true
+      smooth_scroll: true
+      collapsed: true
 ---
 
-## ¿De que trata el informe?
+# ¿De que trata el informe?
 
 La obesidad es un problema de salud pública que ha alcanzado proporciones epidémicas en todo el mundo. Este informe se centra en explorar la relación entre la obesidad y la salud, así como en analizar datos relevantes.
 
