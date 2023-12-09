@@ -5,7 +5,7 @@
 > -   **Diego Ramirez** ([drs1003\@alu.ubu.es](mailto:drs1003@alu.ubu.es){.email})[📩](https://emojipedia.org/shortcodes)
 > -   3º GIS. / [Fuentes de datos biomédicas y webs semanticas GIS.](https://ubuvirtual.ubu.es/course/view.php?id=14468)[🎓](https://emojipedia.org/shortcodes)
 
-![](/Users/oierz/Desktop/Fuentes/Seminario_OierDiego/Fotos/Portada.jpg)
+![.](/Users/oierz/Desktop/Fuentes/Seminario_OierDiego/Fotos/Portada.jpg)
 
 ## ¿Sobre qué trata nuestra investigación? [🔎](https://emojipedia.org/shortcodes)
 
@@ -17,7 +17,7 @@ Nos centraremos en **3 OBJETIVOS PRINCIPALES.**
 
 ### OBJETIVOS PRINCIPALES [📋](https://emojipedia.org/shortcodes)
 
-![](/Users/oierz/Desktop/Fuentes/Seminario_OierDiego/Fotos/DietaDeporte.jpg)
+![,](/Users/oierz/Desktop/Fuentes/Seminario_OierDiego/Fotos/DietaDeporte.jpg)
 
 **Objetivo 1**
 
