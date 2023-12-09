@@ -7,6 +7,10 @@ date: "`r format(Sys.Date(), '%d de %B de %Y')`"
 output:
   html_document:
   toc: true
+  toc_float: 
+    collapsed: false
+    smooth_scroll: false
+  toc_depth: 2
 ---
 
 ## ¿De que trata el informe?
