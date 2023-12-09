@@ -22,7 +22,7 @@ Nos centraremos en **3 OBJETIVOS PRINCIPALES.**
 
 **Objetivo 1**
 
-:   Relación entre el deporte y la salud física.
+:   Relación entre el deporte y la salud.
 
 **Objetivo 2**
 
