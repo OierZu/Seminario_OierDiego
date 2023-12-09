@@ -22,9 +22,29 @@ La obesidad es un problema de salud pública que ha alcanzado proporciones epid�
 Este primer excel proviene de la base de datos del govierno datos.gob, en este podemos ver la relación entre la diabetes y la mortalidad que esta provoca. Aqui dejamos el url para que podais comprobarlo si quereis; <https://datos.gob.es/es/catalogo/a16003011-tasa-de-mortalidad-atribuida-a-la-diabetes-por-territorio-historico-y-sexo-indicadores-de-la-agenda-2030-c-a-de-euskadi1>
 
 ```{r}
-library(readxl)
-datos_diabetes <- read_excel("diabetes.xlsx")
-head(datos_diabetes) 
+library(tidyr)
+library(dplyr)
+
+# Lee el archivo CSV (reemplaza "ruta/del/archivo/datos.csv" con la ruta correcta)
+datos <- read.csv("Excels/diabetes_hypertension_all_2016 (1).csv", sep = ";", header = FALSE)  # El separador es el punto y coma y no tiene encabezado
+
+# Asigna nombres a las columnas
+nombres_columnas <- c("Nombre_Columna1", "Nombre_Columna2", "Nombre_Columna3", "Nombre_Columna4", "Nombre_Columna5", "Nombre_Columna6", "Nombre_Columna7")  # Nombres para siete columnas
+
+# Separa los datos en siete columnas con nombres específicos
+datos_separados <- datos %>%
+  separate(V1, into = nombres_columnas, sep = ";", extra = "merge")
+
+# Muestra el resultado
+print(datos_separados)
+
+
+```
+
+```{r}
+datos <- read.csv("Excels/diabetes_hypertension_all_2016 (1).csv")
+num_columnas <- ncol(datos)
+knitr::kable(datos[1:391, 1:num_columnas], caption = 'A subset of datos.csv.')
 ```
 
 Aqui importamos otro excel, este con datos de la obsidad en la poblacion por sexo;
