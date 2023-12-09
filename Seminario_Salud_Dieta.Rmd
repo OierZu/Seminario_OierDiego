@@ -59,6 +59,8 @@ print(nueva_tabla)
 
 ```
 
+El Departamento de Salud del Condado de Allegheny ha generado esta lista de restaurantes de comida rápida exportando todas las cadenas de restaurantes sin un permiso de alcohol del Sistema de Tarifas y Permisos del Condado. Una cadena de restaurantes definida por el Condado es cualquier restaurante que tiene más de una ubicación en el Condado. Las cadenas de restaurantes capturan cadenas locales y nacionales (incluidas las cadenas nacionales de propiedad local) siempre que haya uno o más establecimientos en funcionamiento dentro del condado. Para ver el enlace pulse [aquí](https://catalog.data.gov/dataset/allegheny-county-fast-food-establishments#sec-dates).
+
 ```{r}
 # Lee el archivo CSV
 datos <- read.csv("Excels/fastfoodalleghenycountyupdatexy2.csv", header = FALSE, sep = ",")
@@ -88,9 +90,9 @@ nueva_tabla <- nueva_tabla[-1, ]
 # Muestra el resultado
 print(nueva_tabla)
 ```
-
-
-
+Estos datos incluyen recuentos de muertes por raza (total, negros, blancos) por grupo de edad y causa de muerte por área censal agregada durante un período de cinco años (2014-18). Datos extraídos del Sistema Electrónico de Registro de Defunciones (EDRS) de Pensilvania con el siguiente descargo de responsabilidad.
+Nosotros hemos aislado los casos de muertes que nos interesan, es decir, diabetes, para así poder trabajar con ellos.
+Para acudir al enlace pulse [aquí](https://catalog.data.gov/dataset/allegheny-county-mortality-indicators).
 ```{r}
 # Lee el archivo CSV
 datos <- read.csv("Excels/mortality_county_all.csv", header = FALSE, sep = ",")
