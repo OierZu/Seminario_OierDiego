@@ -1,6 +1,7 @@
 # 🌶️ SALUD Y ENFERMEDADES RELACIOANDAS CON LA DIETA [🍌](https://emojipedia.org/shortcodes)
 
-> -   Trabajo realizado por;
+> Trabajo realizado por;
+>
 > -   **Oier Zuñiga** ([ozt1001\@alu.ubu.es](mailto:ozt1001@alu.ubu.es){.email})[📩](https://emojipedia.org/shortcodes)
 > -   **Diego Ramirez** ([drs1003\@alu.ubu.es](mailto:drs1003@alu.ubu.es){.email})[📩](https://emojipedia.org/shortcodes)
 > -   3º GIS. / [Fuentes de datos biomédicas y webs semanticas GIS.](https://ubuvirtual.ubu.es/course/view.php?id=14468)[🎓](https://emojipedia.org/shortcodes)
@@ -30,6 +31,20 @@ Nos centraremos en **3 OBJETIVOS PRINCIPALES.**
 **Objetivo 3**
 
 :   Relación entre Diabetes e Hipertensión.
+
+### Descripción de los objetivos
+
+Objetivo 1;
+
+> En este primer objetivo...
+
+Objetivo 2;
+
+> Para este segundo...
+
+objetivo 3;
+
+> Y por ultimo, para este tercero...
 
 ### Bibliografía [📰](https://emojipedia.org/shortcodes)
 
