@@ -17,30 +17,40 @@ La obesidad es un problema de salud pública que ha alcanzado proporciones epid�
 
 Este primer excel proviene de la base de datos del govierno datos.gob, en este podemos ver la relación entre la diabetes y la mortalidad que esta provoca. Aqui dejamos el url para que podais comprobarlo si quereis; <https://datos.gob.es/es/catalogo/a16003011-tasa-de-mortalidad-atribuida-a-la-diabetes-por-territorio-historico-y-sexo-indicadores-de-la-agenda-2030-c-a-de-euskadi1>
 
+Este conjunto de datos proporciona datos de población no identificados sobre la prevalencia de comorbilidad de diabetes e hipertensión en el condado de Allegheny.Los datos son proporcionados por tres organizaciones de atención administrada en el condado de Allegheny. Las siglas de las columnas hacen referencia a: "CT"--\> Control de la diabetes, "BTPAD"--\> Presión arterial diastólica basal, "BTPAN"--\> Presión arterial sistólica basal, "BTWAD"--\> Presión arterial diastólica media, "BTWAN"\--\> Presión arterial istólica media. "BTMAD"--\> Presión arterial media arterial, "BTMAN"--\> Presión arterial media arterial normal.\
+Su enlace es [pinche aquí](https://catalog.data.gov/dataset/diabetes-hypertension-comorbidity)
+
 ```{r}
-library(tidyr)
-library(dplyr)
+# Lee el archivo CSV
+datos <- read.csv("Excels/diabetes_hypertension_all_2016 (1).csv", header = FALSE, sep = ";")
 
-# Lee el archivo CSV (reemplaza "ruta/del/archivo/datos.csv" con la ruta correcta)
-datos <- read.csv("Excels/diabetes_hypertension_all_2016 (1).csv", sep = ";", header = FALSE)  # El separador es el punto y coma y no tiene encabezado
+# Transpone los datos
+datos_transpuestos <- t(datos)
 
-# Asigna nombres a las columnas
-nombres_columnas <- c("Nombre_Columna1", "Nombre_Columna2", "Nombre_Columna3", "Nombre_Columna4", "Nombre_Columna5", "Nombre_Columna6", "Nombre_Columna7")  # Nombres para siete columnas
+# Calcula el número de filas y columnas necesarias
+num_filas <- nrow(datos)
+num_columnas <- ncol(datos)
 
-# Separa los datos en siete columnas con nombres específicos
-datos_separados <- datos %>%
-  separate(V1, into = nombres_columnas, sep = ";", extra = "merge")
+# Calcula el número total de elementos y crea un vector con los datos en el orden deseado
+nuevo_vector <- unlist(datos_transpuestos)
+orden_columnas <- rep(1:num_columnas, each = num_filas)
+orden_filas <- rep(1:num_filas, times = num_columnas)
+orden_final <- order(orden_columnas, orden_filas)
+
+# Crea un nuevo marco de datos con la distribución rotativa
+nueva_tabla <- data.frame(matrix(nuevo_vector[orden_final], ncol = num_columnas, byrow = TRUE))
+
+# Asigna los nombres de las columnas con la primera fila
+colnames(nueva_tabla) <- as.character(datos[1, ])
+
+# Elimina la primera fila (que ahora es la cabecera de las columnas)
+nueva_tabla <- nueva_tabla[-1, ]
 
 # Muestra el resultado
-print(datos_separados)
+print(nueva_tabla)
 
 
-```
 
-```{r}
-datos <- read.csv("Excels/diabetes_hypertension_all_2016 (1).csv")
-num_columnas <- ncol(datos)
-knitr::kable(datos[1:391, 1:num_columnas], caption = 'A subset of datos.csv.')
 ```
 
 Aqui importamos otro excel, este con datos de la obsidad en la poblacion por sexo;
@@ -49,7 +59,20 @@ datos_obesidad \<- read_excel("obesidad.csv")
 
 head(datos_obesidad)
 
-## Aqui otros links que tienen datos sobre el tema de la salud y la dieta que todavia no hemos podido investigar
+```{r}
+library(ggplot2)
+
+# Suponiendo que 'nueva_tabla' es tu tabla con los datos
+datos_long <- tidyr::gather(nueva_tabla, key = "Columna", value = "Valor")
+
+# Gráfico de líneas para las diferentes columnas de 'nueva_tabla'
+ggplot(datos_long, aes(x = Columna, y = Valor, color = Columna)) +
+  geom_line() +
+  labs(x = "Columna", y = "Valor", title = "Gráfico de las columnas de 'nueva_tabla'") +
+  theme_minimal()
+
+
+```
 
 texto[<https://catalog.data.gov/dataset/?q=hypertension&sort=views_recent+desc&res_format=CSV&ext_location=&ext_bbox=&ext_prev_extent=&tags=hypertension>]
 
