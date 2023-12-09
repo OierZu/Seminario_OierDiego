@@ -59,12 +59,6 @@ print(nueva_tabla)
 
 ```
 
-Aqui importamos otro excel, este con datos de la obsidad en la poblacion por sexo;
-
-datos_obesidad \<- read_excel("obesidad.csv")
-
-head(datos_obesidad)
-
 ```{r}
 library(ggplot2)
 
@@ -76,6 +70,68 @@ ggplot(datos_long, aes(x = Columna, y = Valor, color = Columna)) +
   geom_line() +
   labs(x = "Columna", y = "Valor", title = "Gráfico de las columnas de 'nueva_tabla'") +
   theme_minimal()
+
+
+```
+
+```{r}
+# Lee el archivo CSV
+datos <- read.csv("Excels/fastfoodalleghenycountyupdatexy2.csv", header = FALSE, sep = ",")
+
+# Transpone los datos
+datos_transpuestos <- t(datos)
+
+# Calcula el número de filas y columnas necesarias
+num_filas <- nrow(datos)
+num_columnas <- ncol(datos)
+
+# Calcula el número total de elementos y crea un vector con los datos en el orden deseado
+nuevo_vector <- unlist(datos_transpuestos)
+orden_columnas <- rep(1:num_columnas, each = num_filas)
+orden_filas <- rep(1:num_filas, times = num_columnas)
+orden_final <- order(orden_columnas, orden_filas)
+
+# Crea un nuevo marco de datos con la distribución rotativa
+nueva_tabla <- data.frame(matrix(nuevo_vector[orden_final], ncol = num_columnas, byrow = TRUE))
+
+# Asigna los nombres de las columnas con la primera fila
+colnames(nueva_tabla) <- as.character(datos[1, ])
+
+# Elimina la primera fila (que ahora es la cabecera de las columnas)
+nueva_tabla <- nueva_tabla[-1, ]
+
+# Muestra el resultado
+print(nueva_tabla)
+
+```
+```{r}
+# Lee el archivo CSV
+datos <- read.csv("Excels/diabetes_hypertension_all_2016 (1).csv", header = FALSE, sep = ";")
+
+# Transpone los datos
+datos_transpuestos <- t(datos)
+
+# Calcula el número de filas y columnas necesarias
+num_filas <- nrow(datos)
+num_columnas <- ncol(datos)
+
+# Calcula el número total de elementos y crea un vector con los datos en el orden deseado
+nuevo_vector <- unlist(datos_transpuestos)
+orden_columnas <- rep(1:num_columnas, each = num_filas)
+orden_filas <- rep(1:num_filas, times = num_columnas)
+orden_final <- order(orden_columnas, orden_filas)
+
+# Crea un nuevo marco de datos con la distribución rotativa
+nueva_tabla <- data.frame(matrix(nuevo_vector[orden_final], ncol = num_columnas, byrow = TRUE))
+
+# Asigna los nombres de las columnas con la primera fila
+colnames(nueva_tabla) <- as.character(datos[1, ])
+
+# Elimina la primera fila (que ahora es la cabecera de las columnas)
+nueva_tabla <- nueva_tabla[-1, ]
+
+# Muestra el resultado
+print(nueva_tabla)
 
 
 ```
