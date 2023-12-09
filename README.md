@@ -26,7 +26,7 @@ Nos centraremos en **3 OBJETIVOS PRINCIPALES.**
 
 **Objetivo 2**
 
-:   Relación entre la obesidad y los establecimientos de comida rápida.
+:   Relación entre la mortalidad por diabetes y cantidad de establecimientos de comida rápida.
 
 **Objetivo 3**
 
