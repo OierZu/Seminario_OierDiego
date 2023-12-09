@@ -5,7 +5,7 @@
 > -   **Diego Ramirez** ([drs1003\@alu.ubu.es](mailto:drs1003@alu.ubu.es){.email})[📩](https://emojipedia.org/shortcodes)
 > -   3º GIS. / [Fuentes de datos biomédicas y webs semanticas GIS.](https://ubuvirtual.ubu.es/course/view.php?id=14468)[🎓](https://emojipedia.org/shortcodes)
 
-![Portada](/Escritorio/Fuentes/Seminario_OierDiego/Imagenes/Portada.jpg)
+![](/Users/oierz/Desktop/Fuentes/Seminario_OierDiego/Fotos/Portada.jpg)
 
 ## ¿Sobre qué trata nuestra investigación? [🔎](https://emojipedia.org/shortcodes)
 
@@ -15,21 +15,23 @@ Para ello, proporcionaremos datos y estadísticas relacionadas con ambas enferme
 
 Nos centraremos en **3 OBJETIVOS PRINCIPALES.**
 
-> ### OBJETIVOS PRINCIPALES [📋](https://emojipedia.org/shortcodes)
->
-> **Objetivo 1**
->
-> :   x1
->
-> **Objetivo 2**
->
-> :   x2
->
-> **Objetivo 3**
->
-> :   x3
+### OBJETIVOS PRINCIPALES [📋](https://emojipedia.org/shortcodes)
 
-#### Bibliografía [📰](https://emojipedia.org/shortcodes)
+![](/Users/oierz/Desktop/Fuentes/Seminario_OierDiego/Fotos/DietaDeporte.jpg)
+
+**Objetivo 1**
+
+:   x1
+
+**Objetivo 2**
+
+:   x2
+
+**Objetivo 3**
+
+:   x3
+
+### Bibliografía [📰](https://emojipedia.org/shortcodes)
 
 -   Aquí os dejamos un lista con los links y los sitios web que hemos consultado para llevar a cabo el trabajo.
 
