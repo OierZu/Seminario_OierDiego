@@ -6,11 +6,11 @@ author:
 date: "`r format(Sys.Date(), '%d de %B de %Y')`"
 output:
   cleanrmd::html_document_clean:
-    theme: NULL
     toc: true
     toc_float: true
     smooth_scroll: true
     collapsed: true
+    theme: NULL
 ---
 
 # ¿De que trata el informe?
@@ -103,14 +103,18 @@ print(datos_filtrados)
 
 ```
 
-texto[<https://catalog.data.gov/dataset/?q=hypertension&sort=views_recent+desc&res_format=CSV&ext_location=&ext_bbox=&ext_prev_extent=&tags=hypertension>]
+Bibliografía
 
-texto[<https://www.niddk.nih.gov/>]
+Aquí podeis encontrar las beses de datos que hemos utilizado para realizar este proyecto;
 
-texto[<https://www.niddk.nih.gov/>]
+- texto[<https://catalog.data.gov/dataset/?q=hypertension&sort=views_recent+desc&res_format=CSV&ext_location=&ext_bbox=&ext_prev_extent=&tags=hypertension>]
 
-texto[<https://www.data.gov/>]
+- texto[<https://www.niddk.nih.gov/>]
 
-texto[<https://www.opendatasoft.com/>]
+- texto[<https://www.niddk.nih.gov/>]
 
-Texto[Url] dt pakage que se vea el codigo buscar codigo en ingles
+- texto[<https://www.data.gov/>]
+
+- texto[<https://www.opendatasoft.com/>]
+
+- Texto[Url] dt pakage que se vea el codigo buscar codigo en ingles
