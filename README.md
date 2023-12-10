@@ -8,6 +8,16 @@
 
 ![🥝](Fotos/Portada.jpg)
 
+## Indice
+
+1.  [¿Sobre que trata nuestra investigación?](#Punto-1-¿sobre%20que%20trata%20nuestra%20investigación?)
+
+2.  [OBJETIVOS PRINCIPALES](#Punto-2-OBJETIVOS%20PRINCIPALES)
+
+3.  [Explicación de los objetivos](#Punto-3-Explicación%20de%20los%20objetivos)
+
+4.  [Bibliografía](#Punto-4-Bibliografía)
+
 ### ¿Sobre qué trata nuestra investigación? [🔎](https://emojipedia.org/shortcodes)
 
 En este proyecto, intentaremos relacionar y buscar información sobre algunas enfermedades vinculadas con la dieta, como la **obesidad** o la **diabetes tipo 2** entre otras como puede ser la **hipertensión** o **enfermedades cardiovasculares**.
@@ -70,7 +80,7 @@ Por ultimo, en este tercer objetivo hemos comparado la tasa de mortalidad por en
 -   Aquí os dejamos un lista con los links y los sitios web que hemos consultado para llevar a cabo el trabajo.
 
 | **Información**         | **Links**                                                                                   |
-|:-----------------------------------------------|:----------------------|
+|:-----------------------|:-----------------------------------------------|
 | Cardiovascular          | [CSV](https://www3.gobiernodecanarias.org/aplicaciones/appsistac/ods/3-4-1/)                |
 | Diabetes e Hipertensión | [CSV](https://catalog.data.gov/dataset/diabetes-hypertension-comorbidity)                   |
 | Fasfood                 | [CSV](https://catalog.data.gov/dataset/allegheny-county-fast-food-establishments#sec-dates) |
