@@ -21,11 +21,20 @@ En este proyecto hemos tratado de abordar varias enfermedades que pueden ser **g
 Algunas de estas bases de datos han sido;
 
 -   [Base de datos del gobierno de España](https://datos.gob.es/es/)
+
+-   [Base de datos del gobierno de Estados Unidos](https://data.gov/)
+-   [ ]()
+=======
 -   [Base de datos del gobierno de Canarias](https://www3.gobiernodecanarias.org/aplicaciones/appsistac/ods/3-4-1/)
 -   [Base de datos del gobierno de E.E.U.U](https://data.gov)
 -   Entre otras las cuales mencionamos al final de este proyecto en su respectiva bibliografía.
 
+<<<<<<< HEAD
 ## Explicación objetivos
+=======
+
+## Objetivos principales 🎯
+>>>>>>> 1142a7b49e99f0c6fe97a7484987aee64e48ed71
 
 A lo largo de nuestra busqueda de datos que tratar para nuestra investigación, hemos llegado a la conclusión de dividir esta investigación en **3 objetivos principales**, los cuales seran explicados individualmente en el siguiente apartado.
 
@@ -80,8 +89,8 @@ print(copia_nueva_tabla)
 ```{r}
 # Generar boxplots para cada columna
 par(mfrow = c(2, 4))  # Configurar el diseño de la gráfica (2 filas x 4 columnas)
-for (col in names(copia_nueva_tabla_num)) {
-  boxplot(copia_nueva_tabla_num[[col]], col = "green", main = paste("Boxplot de", col))
+for (col in names(copia_nueva_tabla)) {
+  boxplot(copia_nueva_tabla[[col]], col = "green", main = paste("Boxplot de", col))
 }
 
 ```
