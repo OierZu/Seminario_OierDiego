@@ -55,6 +55,31 @@ nueva_tabla <- nueva_tabla[-1, ]
 print(nueva_tabla)
 ```
 ```{r}
+# Eliminar caracteres no numéricos o espacios en blanco en la columna "CT"
+nueva_tabla$CT <- gsub("[^0-9.]", "", nueva_tabla$CT)
+
+# Convertir a valores numéricos
+nueva_tabla$CT <- as.numeric(nueva_tabla$CT)
+
+# Generar un boxplot para la columna "CT" de la tabla 'nueva_tabla'
+boxplot(nueva_tabla$CT, col = "green", main = "Boxplot de CT en nueva_tabla")
+
+# Obtener los datos de la columna CT de nueva_tabla
+datos <- nueva_tabla$CT
+
+# Calcular la media y desviación estándar de los datos
+media <- mean(datos)
+desviacion <- sd(datos)
+
+# Generar datos para la campana de Gauss
+x <- seq(min(datos), max(datos), length.out = 1000)  # Valores x para la curva de la campana de Gauss
+densidad <- dnorm(x, mean = media, sd = desviacion)  # Calcula los valores de densidad en la distribución normal
+
+# Graficar la campana de Gauss
+plot(x, densidad, type = "l", col = "blue", lwd = 2,
+     main = "Campana de Gauss (Distribución Normal)", 
+     xlab = "Valores", ylab = "Densidad")
+
 
 ```
 
@@ -96,39 +121,8 @@ abline(v = percentiles, col = c("red", "green", "blue"), lty = 2)
 
 ### Segundo Objetivo
 
-El Departamento de Salud del Condado de Allegheny ha generado esta lista de restaurantes de comida rápida exportando todas las cadenas de restaurantes sin un permiso de alcohol del Sistema de Tarifas y Permisos del Condado. Una cadena de restaurantes definida por el Condado es cualquier restaurante que tiene más de una ubicación en el Condado. Las cadenas de restaurantes capturan cadenas locales y nacionales (incluidas las cadenas nacionales de propiedad local) siempre que haya uno o más establecimientos en funcionamiento dentro del condado. Para ver el enlace pulse [aquí](https://catalog.data.gov/dataset/allegheny-county-fast-food-establishments#sec-dates).
-
-```{r}
-# Lee el archivo CSV
-datos <- read.csv("Excels/FastFood.csv", header = FALSE, sep = ",")
-
-# Transpone los datos
-datos_transpuestos <- t(datos)
-
-# Calcula el número de filas y columnas necesarias
-num_filas <- nrow(datos)
-num_columnas <- ncol(datos)
-
-# Calcula el número total de elementos y crea un vector con los datos en el orden deseado
-nuevo_vector <- unlist(datos_transpuestos)
-orden_columnas <- rep(1:num_columnas, each = num_filas)
-orden_filas <- rep(1:num_filas, times = num_columnas)
-orden_final <- order(orden_columnas, orden_filas)
-
-# Crea un nuevo marco de datos con la distribución rotativa
-nueva_tabla <- data.frame(matrix(nuevo_vector[orden_final], ncol = num_columnas, byrow = TRUE))
-
-# Asigna los nombres de las columnas con la primera fila
-colnames(nueva_tabla) <- as.character(datos[1, ])
-
-# Elimina la primera fila (que ahora es la cabecera de las columnas)
-nueva_tabla <- nueva_tabla[-1, ]
-
-# Muestra el resultado
-print(nueva_tabla)
-```
-
 Estos datos incluyen recuentos de muertes por raza (total, negros, blancos) por grupo de edad y causa de muerte por área censal agregada durante un período de cinco años (2014-18). Datos extraídos del Sistema Electrónico de Registro de Defunciones (EDRS) de Pensilvania con el siguiente descargo de responsabilidad. Nosotros hemos aislado los casos de muertes que nos interesan, es decir, diabetes, para así poder trabajar con ellos. Para acudir al enlace pulse [aquí](https://catalog.data.gov/dataset/allegheny-county-mortality-indicators).
+
 
 ```{r}
 # Lee el archivo CSV
@@ -140,21 +134,27 @@ datos_filtrados <- datos[grep("Diabetes", datos$V1), ]
 # Mostrar el resultado
 print(datos_filtrados)
 
+
 ```
 
 ```{r}
-# Crear gráfico de líneas
 library(ggplot2)
-grafico_lineas <- ggplot() +
-  geom_line(data = nueva_tabla, aes(x = Category, y = V4, group = 1), color = "blue") +
-  geom_line(data = datos_filtrados, aes(x = Category, y = V4, group = 1), color = "green") +
-  labs(title = "Gráfico de líneas por establecimiento",
-       x = "Tipo de establecimiento",
-       y = "Valor") +
+library(dplyr)
+
+# Ordenar datos por la columna V4 en orden ascendente
+datos_filtrados <- datos_filtrados %>% 
+  arrange(V4)
+
+# Convertir V3 a factor para evitar errores si es numérico
+datos_filtrados$V3 <- as.factor(datos_filtrados$V3)
+
+ggplot(datos_filtrados, aes(x = V3, y = V4, color = V2, group = V2)) +
+  geom_line() +
+  geom_point() +
+  labs(x = "Edad", y = "Número de muertos") +
+  scale_color_manual(values = c("BLACK" = "red", "WHITE" = "blue")) +
   theme_minimal()
 
-# Muestra el gráfico de líneas
-print(grafico_lineas)
 
 ```
 
