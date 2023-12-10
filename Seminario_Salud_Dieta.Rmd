@@ -23,18 +23,18 @@ Algunas de estas bases de datos han sido;
 -   [Base de datos del gobierno de España](https://datos.gob.es/es/)
 
 -   [Base de datos del gobierno de Estados Unidos](https://data.gov/)
+
 -   [ ]()
-=======
+
 -   [Base de datos del gobierno de Canarias](https://www3.gobiernodecanarias.org/aplicaciones/appsistac/ods/3-4-1/)
+
 -   [Base de datos del gobierno de E.E.U.U](https://data.gov)
+
 -   Entre otras las cuales mencionamos al final de este proyecto en su respectiva bibliografía.
 
-<<<<<<< HEAD
-## Explicación objetivos
-=======
+# \## Explicación objetivos
 
 ## Objetivos principales 🎯
->>>>>>> 1142a7b49e99f0c6fe97a7484987aee64e48ed71
 
 A lo largo de nuestra busqueda de datos que tratar para nuestra investigación, hemos llegado a la conclusión de dividir esta investigación en **3 objetivos principales**, los cuales seran explicados individualmente en el siguiente apartado.
 
@@ -86,10 +86,12 @@ copia_nueva_tabla <- as.data.frame(lapply(nueva_tabla, as.numeric))
 print(copia_nueva_tabla)
 ```
 
+Para la elaboración de esta gráfica, entre ambos compañeros decidimos que la mejor idea podría ser crear una "Boxplot"(El Diagrama de Caja y bigotes es un tipo de gráfico que muestra un resumen de una gran cantidad de datos en cinco medidas descriptivas, además de intuir su morfología y simetría) para agrupar estos datos específicos. La idea nos vino de la asignatura de 2º: Bioestadísta. Una vez cogimos la idea procedimos a buscar videos tutoriales para aprender a crearlos, [este](https://www.youtube.com/watch?v=DzgK1V9XZc4) es uno de ellos.
+
 ```{r}
-# Generar boxplots para cada columna
-par(mfrow = c(2, 4))  # Configurar el diseño de la gráfica (2 filas x 4 columnas)
-for (col in names(copia_nueva_tabla)) {
+# Ahora generaremos boxplots para cada columna
+par(mfrow = c(2, 4))  # Configuramos el diseño de la gráfica.
+for (col in names(copia_nueva_tabla)) { #Creamos un bucle en el que se van creando las boxplot de las columnas.
   boxplot(copia_nueva_tabla[[col]], col = "green", main = paste("Boxplot de", col))
 }
 
