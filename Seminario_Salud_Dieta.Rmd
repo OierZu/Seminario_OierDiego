@@ -26,7 +26,7 @@ Algunas de estas bases de datos han sido;
 -   [Base de datos del gobierno de E.E.U.U](https://data.gov)
 -   Entre otras las cuales mencionamos al final de este proyecto en su respectiva bibliografía.
 
-# Explicación de los objetivos del proyecto
+## Explicación de los objetivos del proyecto
 
 A lo largo de nuestra busqueda de datos que tratar para nuestra investigación, hemos llegado a la conclusión de dividir esta investigación en **3 objetivos principales**, los cuales seran explicados individualmente en el siguiente apartado.
 
@@ -34,7 +34,7 @@ En estos 3 objetivos hemos usado datos e información diversa la cual hemos trat
 
 También es importante mencionar que estos conjuntos de datos los hemos obtenido a partir de archivos **CSV** que hemos descargado he importado en este trabajo. Estos **CSV** los hemos sacado de algunas de las bases de datos mencionadas anteriormente.
 
-## Objetivos principales 🎯
+# Objetivos principales 🎯
 
 ### Primer Objetivo
 
@@ -104,7 +104,7 @@ for (col in names(copia_nueva_tabla)) { #Creamos un bucle en el que se van crean
 
 ```
 
-### Conclusión objetivo 1
+#### Conclusión objetivo 1
 
 Una vez obtenidos estos Boxplots de las diferentes columnas, podemos comprobar con los datos del gobierno de EEUU de salud cuáles son los parámetros normales y compararlos con la media de nuestros resultados, observando que ciertamente son superiores en todos sus parámetros.
 
@@ -141,7 +141,7 @@ ggplot(datos_filtrados, aes(x = V3, y = V4, color = V2, group = V2)) +
 
 ```
 
-### Conclusión objetivo 2
+#### Conclusión objetivo 2
 
 A partir de los datos gráficos obtenidos, es posible inferir una correlación entre la diabetes tipo 2 y la pertenencia étnica (blanca o negra).Estas conclusiones respaldan en parte lo que dicen los artículos sobre este tema, mostrando que la raza tiene importancia en cómo se manifiesta esta condición médica. He [aquí](https://www.aarp.org/espanol/salud/vida-saludable/info-2018/raza-y-el-riesgo-de-diabetes.html) un artículo que lo respalda. Gracias a esta gráfica también podemos observar que otra relación entre la edad y el nº de muertes por esta causa.
 
@@ -216,11 +216,11 @@ print(grafico)
 
 ```
 
-### Conclusión objetivo 3
+#### Conclusión objetivo 3
 
 Como podemos observar en esta gráfica en la parte superior, la tasa de mortalidad por enfermedades cardiovasculares, cada año está subiendo más y más en "ES70", es decir, las Islas Canarias, mientras que en "ES" (España), va disminuyendo notablemente. Este dato nos impacta ya que ambos datos están recopilados en "por 100.000 habitantes" y España es notablemente más grande demográficamente que las Islas Canarias y, sin embargo, cada vez está más cerca de alcanzar los datos de la península. Como conclusión de esta gráfica podemos corroborar algunos artículos como [este](https://www.eldiario.es/canariasahora/canarias-opina/obesidad-problema-social-canarias_1_10567486.html) en el que índica que cada vez hay más y más obesidad entre la población canaria.
 
-## Bibliografía
+# Bibliografía
 
 Aquí podeis encontrar las beses de datos que hemos utilizado para realizar este proyecto;
 
