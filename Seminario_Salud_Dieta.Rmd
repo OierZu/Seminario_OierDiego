@@ -21,20 +21,12 @@ En este proyecto hemos tratado de abordar varias enfermedades que pueden ser **g
 Algunas de estas bases de datos han sido;
 
 -   [Base de datos del gobierno de España](https://datos.gob.es/es/)
-
 -   [Base de datos del gobierno de Estados Unidos](https://data.gov/)
--   [ ]()
-=======
 -   [Base de datos del gobierno de Canarias](https://www3.gobiernodecanarias.org/aplicaciones/appsistac/ods/3-4-1/)
 -   [Base de datos del gobierno de E.E.U.U](https://data.gov)
 -   Entre otras las cuales mencionamos al final de este proyecto en su respectiva bibliografía.
 
-<<<<<<< HEAD
-## Explicación objetivos
-=======
-
-## Objetivos principales 🎯
->>>>>>> 1142a7b49e99f0c6fe97a7484987aee64e48ed71
+### Explicación de los objetivos
 
 A lo largo de nuestra busqueda de datos que tratar para nuestra investigación, hemos llegado a la conclusión de dividir esta investigación en **3 objetivos principales**, los cuales seran explicados individualmente en el siguiente apartado.
 
@@ -46,8 +38,19 @@ También es importante mencionar que estos conjuntos de datos los hemos obtenido
 
 ### Primer Objetivo
 
-Este conjunto de datos proporciona datos de población no identificados sobre la prevalencia de comorbilidad de diabetes e hipertensión en el condado de Allegheny.Los datos son proporcionados por tres organizaciones de atención administrada en el condado de Allegheny. Las siglas de las columnas hacen referencia a: "CT"--\> Control de la diabetes, "BTPAD"--\> Presión arterial diastólica basal, "BTPAN"--\> Presión arterial sistólica basal, "BTWAD"--\> Presión arterial diastólica media, "BTWAN"\--\> Presión arterial istólica media. "BTMAD"--\> Presión arterial media arterial, "BTMAN"--\> Presión arterial media arterial normal.\
-Su enlace es [pinche aquí](https://catalog.data.gov/dataset/diabetes-hypertension-comorbidity)
+Para este primer objetivo hemos obtado por utilizar datos proporcionados por el estado de allegheny. Estos datos costan sobre diabetes e hipertensión en la población de este estado, los cuales hemos utilizado para generar un ***BOXPLOT*** de cada una de las columnas obtenidas de este conjunto de datos;
+
+**Columnas en cuestión;**
+
+> -   **"CT"**--\> Control de la diabetes.
+> -   **"BTPAD"**--\> Presión arterial diastólica basal.
+> -   **"BTPAN"**--\> Presión arterial sistólica basal.
+> -   **"BTWAD"**--\> Presión arterial diastólica media.
+> -   **"BTWAN"**\--\> Presión arterial istólica media.
+> -   **"BTMAD"**--\> Presión arterial media arterial.
+> -   **"BTMAN"**--\> Presión arterial media arterial normal.
+
+Aqui dejamos el **URL** al archivo **CSV** utilizado en este objetivo [CSV](https://catalog.data.gov/dataset/diabetes-hypertension-comorbidity)
 
 ```{r}
 #Primero procedemos a leer el archivo CSV con la posición del archivo, además indicamos que no tienen título las columnas y su separador es ";".
