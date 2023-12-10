@@ -14,16 +14,19 @@ output:
     theme: NULL
 ---
 
-# ¿De que trata el proyecto?
+# ¿De que trata el proyecto? 🕵🏿
 
-En este proyecto hemos tratado de abordar diversas enfermedades las cuales pueden ser generadas por la dieta. Para ello, hemos buscado información en diversas bases de datos las cuales nos han proporcionado grandes conjuntos de datos los cuales nos han sido de utilidad para llevar a cabo este trabajo de investigación.
+En este proyecto hemos tratado de abordar varias enfermedades que pueden ser **generadas por la dieta**. Para ello, hemos buscado información en diversas bases de datos las cuales nos han proporcionado grandes conjuntos de datos los cuales nos han sido de utilidad para llevar a cabo este trabajo de investigación.
 
 Algunas de estas bases de datos han sido;
 
--   [Base de datos del govierno de Españ](https://datos.gob.es/es/)
-- []()
+-   [Base de datos del govierno de España](https://datos.gob.es/es/)
+-   [ ]()
+-   [ ]()
 
-## Algunos datos que hemos obtendio y sus bases de datos de origen
+## Objetivos principales 🎯
+
+A lo largo de nuestra busqueda de datos que tratar para nuestra investigación, hemos llegado a la conclusión de dividir esta investigación en **3 objetivos principales**, los cuales seran explicados individualmente a continuación;
 
 ### Primer Objetivo
 
