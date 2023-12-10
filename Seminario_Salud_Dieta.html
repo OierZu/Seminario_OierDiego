@@ -1039,22 +1039,23 @@ href="https://catalog.data.gov/dataset/diabetes-hypertension-comorbidity">CSV</a
 ## 388 980000     4     1     3     1     1     0
 ## 389 980100     7     0     6     0     1     0
 ## 390 980700     9     0     5     0     4     0</code></pre>
+<h4 id="elaboración-boxplot">Elaboración Boxplot</h4>
 <p>Para la elaboración de esta gráfica, entre ambos compañeros decidimos
 que la mejor idea podría ser crear una “Boxplot”(El Diagrama de Caja y
 bigotes es un tipo de gráfico que muestra un resumen de una gran
 cantidad de datos en cinco medidas descriptivas, además de intuir su
 morfología y simetría) para agrupar estos datos específicos. La idea nos
-vino de la asignatura de 2º: Bioestadísta. Una vez cogimos la idea
-procedimos a buscar videos tutoriales para aprender a crearlos, <a
-href="https://www.youtube.com/watch?v=DzgK1V9XZc4">este</a> es uno de
-ellos.</p>
+vino de la asignatura de 2º: Bioestadísta.</p>
+<p>Una vez cogimos la idea procedimos a buscar <a
+href="https://www.youtube.com/watch?v=DzgK1V9XZc4">videos tutoriales</a>
+para aprender a crearlos.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ahora generaremos boxplots para cada columna</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>))  <span class="co"># Configuramos el diseño de la gráfica.</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (col <span class="cf">in</span> <span class="fu">names</span>(copia_nueva_tabla)) { <span class="co">#Creamos un bucle en el que se van creando las boxplot de las columnas.</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">boxplot</span>(copia_nueva_tabla[[col]], <span class="at">col =</span> <span class="st">&quot;green&quot;</span>, <span class="at">main =</span> <span class="fu">paste</span>(<span class="st">&quot;Boxplot de&quot;</span>, col))</span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p><img src="Seminario_Salud_Dieta_files/figure-html5/unnamed-chunk-3-1.png" width="960" /></p>
-<h4 id="conclusión">Conclusión</h4>
+<h4 id="conclusión-objetivo-1">Conclusión objetivo 1</h4>
 <p>Una vez obtenidos estos Boxplots de las diferentes columnas, podemos
 comprobar con los datos del gobierno de EEUU de salud cuáles son los
 parámetros normales y compararlos con la media de nuestros resultados,
@@ -1125,7 +1126,16 @@ referencia a los intervalos de edad ofrecidos por el CSV.</p>
 <span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;BLACK&quot;</span> <span class="ot">=</span> <span class="st">&quot;red&quot;</span>, <span class="st">&quot;WHITE&quot;</span> <span class="ot">=</span> <span class="st">&quot;blue&quot;</span>)) <span class="sc">+</span> <span class="co">#Indicamos los valores y colores de cada línea/punto.</span></span>
 <span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="co">#ggplot2 nos ofrece distintas salidas visuales, elegimos esta por su simplicidad</span></span></code></pre></div>
 <p><img src="Seminario_Salud_Dieta_files/figure-html5/unnamed-chunk-5-1.png" width="960" /></p>
-<h4 id="conclusión-1">Conclusión</h4>
+<h4 id="conclusión">Conclusión</h4>
+<p>A partir de los datos gráficos obtenidos, es posible inferir una
+correlación entre la diabetes tipo 2 y la pertenencia étnica (blanca o
+negra).Estas conclusiones respaldan en parte lo que dicen los artículos
+sobre este tema, mostrando que la raza tiene importancia en cómo se
+manifiesta esta condición médica. He <a
+href="https://www.aarp.org/espanol/salud/vida-saludable/info-2018/raza-y-el-riesgo-de-diabetes.html">aquí</a>
+un artículo que lo respalda. Gracias a esta gráfica también podemos
+observar que otra relación entre la edad y el nº de muertes por esta
+causa.</p>
 <h3 id="tercer-objetivo">Tercer Objetivo</h3>
 <p>A continuación procedemos a utlizar una gráfica de barras/columnas,
 en las que indicaremos de 2 colores (rojo y verde) cada lugar de origen
@@ -1242,7 +1252,7 @@ cardiovasculares.</p>
 <span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Muestra el gráfico</span></span>
 <span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafico)</span></code></pre></div>
 <p><img src="Seminario_Salud_Dieta_files/figure-html5/unnamed-chunk-7-2.png" width="960" /></p>
-<h4 id="conclusión-2">Conclusión</h4>
+<h4 id="conclusión-1">Conclusión</h4>
 <p>Como podemos observar en esta gráfica en la parte superior, la tasa
 de mortalidad por enfermedades cardiovasculares, cada año está subiendo
 más y más en “ES70”, es decir, las Islas Canarias, mientras que en “ES”

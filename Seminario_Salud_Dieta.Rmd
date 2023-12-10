@@ -26,7 +26,7 @@ Algunas de estas bases de datos han sido;
 -   [Base de datos del gobierno de E.E.U.U](https://data.gov)
 -   Entre otras las cuales mencionamos al final de este proyecto en su respectiva bibliografía.
 
-### Explicación de los objetivos
+# Explicación de los objetivos del proyecto
 
 A lo largo de nuestra busqueda de datos que tratar para nuestra investigación, hemos llegado a la conclusión de dividir esta investigación en **3 objetivos principales**, los cuales seran explicados individualmente en el siguiente apartado.
 
@@ -89,7 +89,11 @@ copia_nueva_tabla <- as.data.frame(lapply(nueva_tabla, as.numeric))
 print(copia_nueva_tabla)
 ```
 
-Para la elaboración de esta gráfica, entre ambos compañeros decidimos que la mejor idea podría ser crear una "Boxplot"(El Diagrama de Caja y bigotes es un tipo de gráfico que muestra un resumen de una gran cantidad de datos en cinco medidas descriptivas, además de intuir su morfología y simetría) para agrupar estos datos específicos. La idea nos vino de la asignatura de 2º: Bioestadísta. Una vez cogimos la idea procedimos a buscar videos tutoriales para aprender a crearlos, [este](https://www.youtube.com/watch?v=DzgK1V9XZc4) es uno de ellos.
+#### Elaboración Boxplot
+
+Para la elaboración de esta gráfica, entre ambos compañeros decidimos que la mejor idea podría ser crear una "Boxplot"(El Diagrama de Caja y bigotes es un tipo de gráfico que muestra un resumen de una gran cantidad de datos en cinco medidas descriptivas, además de intuir su morfología y simetría) para agrupar estos datos específicos. La idea nos vino de la asignatura de 2º: Bioestadísta.
+
+Una vez cogimos la idea procedimos a buscar [videos tutoriales](https://www.youtube.com/watch?v=DzgK1V9XZc4) para aprender a crearlos.
 
 ```{r}
 # Ahora generaremos boxplots para cada columna
@@ -100,7 +104,7 @@ for (col in names(copia_nueva_tabla)) { #Creamos un bucle en el que se van crean
 
 ```
 
-#### Conclusión
+### Conclusión objetivo 1
 
 Una vez obtenidos estos Boxplots de las diferentes columnas, podemos comprobar con los datos del gobierno de EEUU de salud cuáles son los parámetros normales y compararlos con la media de nuestros resultados, observando que ciertamente son superiores en todos sus parámetros.
 
@@ -137,9 +141,10 @@ ggplot(datos_filtrados, aes(x = V3, y = V4, color = V2, group = V2)) +
 
 ```
 
-#### Conclusión
-A partir de los datos gráficos obtenidos, es posible inferir una correlación entre la diabetes tipo 2 y la pertenencia étnica (blanca o negra).Estas conclusiones respaldan en parte lo que dicen los artículos sobre este tema, mostrando que la raza tiene importancia en cómo se manifiesta esta condición médica. He [aquí](https://www.aarp.org/espanol/salud/vida-saludable/info-2018/raza-y-el-riesgo-de-diabetes.html) un artículo que lo respalda.
-Gracias a esta gráfica también podemos observar que otra relación entre la edad y el nº de muertes por esta causa.
+### Conclusión objetivo 2
+
+A partir de los datos gráficos obtenidos, es posible inferir una correlación entre la diabetes tipo 2 y la pertenencia étnica (blanca o negra).Estas conclusiones respaldan en parte lo que dicen los artículos sobre este tema, mostrando que la raza tiene importancia en cómo se manifiesta esta condición médica. He [aquí](https://www.aarp.org/espanol/salud/vida-saludable/info-2018/raza-y-el-riesgo-de-diabetes.html) un artículo que lo respalda. Gracias a esta gráfica también podemos observar que otra relación entre la edad y el nº de muertes por esta causa.
+
 ### Tercer Objetivo
 
 A continuación procedemos a utlizar una gráfica de barras/columnas, en las que indicaremos de 2 colores (rojo y verde) cada lugar de origen (España e Islas Canarias). El eje de las X corresponde a los años trascurridos en los que se han recogido datos. El eje de las Y hace referencia a las cifras de fallecidos por enfermedades cardiovasculares.
@@ -211,11 +216,11 @@ print(grafico)
 
 ```
 
-#### Conclusión
+### Conclusión objetivo 3
 
 Como podemos observar en esta gráfica en la parte superior, la tasa de mortalidad por enfermedades cardiovasculares, cada año está subiendo más y más en "ES70", es decir, las Islas Canarias, mientras que en "ES" (España), va disminuyendo notablemente. Este dato nos impacta ya que ambos datos están recopilados en "por 100.000 habitantes" y España es notablemente más grande demográficamente que las Islas Canarias y, sin embargo, cada vez está más cerca de alcanzar los datos de la península. Como conclusión de esta gráfica podemos corroborar algunos artículos como [este](https://www.eldiario.es/canariasahora/canarias-opina/obesidad-problema-social-canarias_1_10567486.html) en el que índica que cada vez hay más y más obesidad entre la población canaria.
 
-Bibliografía
+## Bibliografía
 
 Aquí podeis encontrar las beses de datos que hemos utilizado para realizar este proyecto;
 
