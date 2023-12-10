@@ -21,12 +21,22 @@ En este proyecto hemos tratado de abordar varias enfermedades que pueden ser **g
 Algunas de estas bases de datos han sido;
 
 -   [Base de datos del gobierno de España](https://datos.gob.es/es/)
+
 -   [Base de datos del gobierno de Estados Unidos](https://data.gov/)
 -   [ ]()
+=======
+-   [Base de datos del gobierno de Canarias](https://www3.gobiernodecanarias.org/aplicaciones/appsistac/ods/3-4-1/)
+-   [Base de datos del gobierno de E.E.U.U](https://data.gov)
+-   Entre otras las cuales mencionamos al final de este proyecto en su respectiva bibliografía.
+
 
 ## Objetivos principales 🎯
 
-A lo largo de nuestra busqueda de datos que tratar para nuestra investigación, hemos llegado a la conclusión de dividir esta investigación en **3 objetivos principales**, los cuales seran explicados individualmente a continuación;
+A lo largo de nuestra busqueda de datos que tratar para nuestra investigación, hemos llegado a la conclusión de dividir esta investigación en **3 objetivos principales**, los cuales seran explicados individualmente en el siguiente apartado.
+
+En estos 3 objetivos hemos usado datos e información diversa la cual hemos tratado de relacionar generando graficas distintas en cada uno de estos para poder visualizar con mayor facilidad estos datos.
+
+También es importante mencionar que estos conjuntos de datos los hemos obtenido a partir de archivos **CSV** que hemos descargado he importado en este trabajo, los cuales hemos sacado de algunas de las bases de datos mencionadas anteriormente.
 
 ### Primer Objetivo
 
