@@ -22,25 +22,11 @@ Algunas de estas bases de datos han sido;
 
 -   [Base de datos del gobierno de España](https://datos.gob.es/es/)
 -   [Base de datos del gobierno de Estados Unidos](https://data.gov/)
-
-
--   [ ]()
-
-
-
 -   [Base de datos del gobierno de Canarias](https://www3.gobiernodecanarias.org/aplicaciones/appsistac/ods/3-4-1/)
-
 -   [Base de datos del gobierno de E.E.U.U](https://data.gov)
-
 -   Entre otras las cuales mencionamos al final de este proyecto en su respectiva bibliografía.
 
-
-# \## Explicación objetivos
-
-## Objetivos principales 🎯
-
 ### Explicación de los objetivos
-
 
 A lo largo de nuestra busqueda de datos que tratar para nuestra investigación, hemos llegado a la conclusión de dividir esta investigación en **3 objetivos principales**, los cuales seran explicados individualmente en el siguiente apartado.
 
