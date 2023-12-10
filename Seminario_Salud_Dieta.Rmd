@@ -110,7 +110,7 @@ print(datos_filtrados)
 ### Tercer Objetivo
 ```{r}
 # Lee el archivo CSV
-datos <- read.csv("Excels/Cardiobascular.csv", header = FALSE, sep = ",")
+datos <- read.csv("Excels/Cardiovascular.csv", header = FALSE, sep = ",")
 
 # Transpone los datos
 datos_transpuestos <- t(datos)
