@@ -82,6 +82,6 @@ Esperamos que este ReadMe os sea de utilidad para entender un poco aunque sea so
 
 De todoso modos, cualquier consulta que se tenga, al inicio de este documento teneis los e-mails de ambos creadores ~~que en caso de que tengais alguna consulta intentaremos resolverla. (No escribais porfavor 😭 )~~
 
-**UN SALUDO Y MUCHAS GRACIAS POR APOYAR NUESTRO PROYECTO**
+**UN SALUDO Y MUCHAS GRACIAS POR APOYAR NUESTRO PROYECTO.**
 
 ![**FIN**](Fotos/Despedida.jpg)

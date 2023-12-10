@@ -53,11 +53,14 @@ nueva_tabla <- nueva_tabla[-1, ]
 
 # Muestra el resultado
 print(nueva_tabla)
-
-
-
 ```
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> edf6bfb9e2a7333c473bafdcd9e73421453cef84
 ### Segundo Objetivo
 
 El Departamento de Salud del Condado de Allegheny ha generado esta lista de restaurantes de comida rápida exportando todas las cadenas de restaurantes sin un permiso de alcohol del Sistema de Tarifas y Permisos del Condado. Una cadena de restaurantes definida por el Condado es cualquier restaurante que tiene más de una ubicación en el Condado. Las cadenas de restaurantes capturan cadenas locales y nacionales (incluidas las cadenas nacionales de propiedad local) siempre que haya uno o más establecimientos en funcionamiento dentro del condado. Para ver el enlace pulse [aquí](https://catalog.data.gov/dataset/allegheny-county-fast-food-establishments#sec-dates).
@@ -105,7 +108,20 @@ datos_filtrados <- datos[grep("Diabetes", datos$V1), ]
 print(datos_filtrados)
 
 ```
+```{r}
+# Crear gráfico de líneas
+grafico_lineas <- ggplot() +
+  geom_line(data = nueva_tabla, aes(x = Category, y = V4, group = 1), color = "blue") +
+  geom_line(data = datos_filtrados, aes(x = Category, y = V4, group = 1), color = "green") +
+  labs(title = "Gráfico de líneas por establecimiento",
+       x = "Tipo de establecimiento",
+       y = "Valor") +
+  theme_minimal()
 
+# Muestra el gráfico de líneas
+print(grafico_lineas)
+
+```
 ### Tercer Objetivo
 
 ```{r}
