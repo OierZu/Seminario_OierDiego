@@ -7,10 +7,11 @@ date: "`r format(Sys.Date(), '%d de %B de %Y')`"
 output:
   cleanrmd::html_document_clean:
     toc: true
-    toc_float: true
-    smooth_scroll: true
-    collapsed: true
-    theme: NULL
+      toc_float: true
+      smooth_scroll: true
+      collapsed: true
+    number_sections: true
+      theme: NULL
 ---
 
 # ¿De que trata el informe?
