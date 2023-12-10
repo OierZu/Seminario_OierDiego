@@ -22,7 +22,7 @@ Nos centraremos en **3 OBJETIVOS PRINCIPALES.**
 
 **Objetivo 1**
 
-:   Relación entre el deporte y la salud.
+:   Relación entre Diabetes e Hipertensión.
 
 **Objetivo 2**
 
@@ -30,7 +30,7 @@ Nos centraremos en **3 OBJETIVOS PRINCIPALES.**
 
 **Objetivo 3**
 
-:   Relación entre Diabetes e Hipertensión.
+:   Mortalidad por enfermedades cardiovasculares
 
 ### Descripción de los objetivos
 
@@ -40,7 +40,7 @@ Objetivo 1;
 
 Objetivo 2;
 
-> Para este segundo...
+> Para este segundo objetivo hemos buscado en diferentes bases de datos las cuales nos pudieran proporcionar alguna información sobre si existe alguna relación entre la aparición y mortalidad por diabetes tipo 2 y la cantidad de establecimientos de *Fastfood* que encontramos. En este caso estos datos son del estado de Allegheny en E.E.U.U.
 
 objetivo 3;
 
@@ -55,3 +55,5 @@ objetivo 3;
 | Diabetes        |           |
 | Obesidad        |           |
 |                 |           |
+
+![3](Fotos/Despedida.jpg)
