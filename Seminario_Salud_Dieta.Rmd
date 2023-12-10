@@ -54,13 +54,46 @@ nueva_tabla <- nueva_tabla[-1, ]
 # Muestra el resultado
 print(nueva_tabla)
 ```
+```{r}
 
-<<<<<<< HEAD
-=======
+```
+
+```{r}
+# Eliminar caracteres no numéricos o espacios en blanco
+nueva_tabla$BTPAD <- gsub("[^0-9.]", "", nueva_tabla$BTPAD)
+
+# Convertir a valores numéricos
+nueva_tabla$BTPAD <- as.numeric(nueva_tabla$BTPAD)
+
+# Genera un boxplot para la columna "BTPAD" de la tabla 'nueva_tabla'
+boxplot(nueva_tabla$BTPAD, col = "green", main = "Boxplot de BTPAD en nueva_tabla")
+
+# Obtener los datos de la columna BTPAD de nueva_tabla
+datos <- nueva_tabla$BTPAD
+
+# Calcular la media y desviación estándar de los datos
+media <- mean(datos)
+desviacion <- sd(datos)
+
+# Generar datos para la campana de Gauss
+x <- seq(min(datos), max(datos), length.out = 1000)  # Valores x para la curva de la campana de Gauss
+densidad <- dnorm(x, mean = media, sd = desviacion)  # Calcula los valores de densidad en la distribución normal
+
+# Graficar la campana de Gauss
+plot(x, densidad, type = "l", col = "blue", lwd = 2,
+     main = "Campana de Gauss (Distribución Normal)", 
+     xlab = "Valores", ylab = "Densidad")
+
+# Calcular los percentiles 25, 50 y 75 en los datos
+percentiles <- quantile(datos, c(0.25, 0.5, 0.75))
+
+# Graficar líneas verticales en los percentiles
+abline(v = percentiles, col = c("red", "green", "blue"), lty = 2)
 
 
 
->>>>>>> edf6bfb9e2a7333c473bafdcd9e73421453cef84
+```
+
 ### Segundo Objetivo
 
 El Departamento de Salud del Condado de Allegheny ha generado esta lista de restaurantes de comida rápida exportando todas las cadenas de restaurantes sin un permiso de alcohol del Sistema de Tarifas y Permisos del Condado. Una cadena de restaurantes definida por el Condado es cualquier restaurante que tiene más de una ubicación en el Condado. Las cadenas de restaurantes capturan cadenas locales y nacionales (incluidas las cadenas nacionales de propiedad local) siempre que haya uno o más establecimientos en funcionamiento dentro del condado. Para ver el enlace pulse [aquí](https://catalog.data.gov/dataset/allegheny-county-fast-food-establishments#sec-dates).
@@ -108,8 +141,10 @@ datos_filtrados <- datos[grep("Diabetes", datos$V1), ]
 print(datos_filtrados)
 
 ```
+
 ```{r}
 # Crear gráfico de líneas
+library(ggplot2)
 grafico_lineas <- ggplot() +
   geom_line(data = nueva_tabla, aes(x = Category, y = V4, group = 1), color = "blue") +
   geom_line(data = datos_filtrados, aes(x = Category, y = V4, group = 1), color = "green") +
@@ -122,9 +157,11 @@ grafico_lineas <- ggplot() +
 print(grafico_lineas)
 
 ```
+
 ### Tercer Objetivo
 
 ```{r}
+library(ggplot2)
 # Lee el archivo CSV
 datos <- read.csv("Excels/Cardiovascular.csv", header = FALSE, sep = ",")
 
