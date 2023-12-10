@@ -100,7 +100,7 @@ Estos datos incluyen recuentos de muertes por raza (total, negros, blancos) por 
 datos <- read.csv("Excels/mortality_county_all.csv", header = FALSE, sep = ",")
 
 # Filtrar filas que comienzan con "Diabetes" en la primera columna
-datos_filtrados <- datos[grep("^Diabetes", datos$V1), ]
+datos_filtrados <- datos[grep("Diabetes", datos$V1), ]
 
 # Mostrar el resultado
 print(datos_filtrados)
@@ -142,7 +142,20 @@ print(nueva_tabla_filtrada)
 
 
 ```
+```{r}
+# Gráfica de barras
+grafico <- ggplot(nueva_tabla_filtrada, aes(x = Year, y = Value, fill = Territorio)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(title = "Gráfico de barras por Territorio",
+       x = "Año",
+       y = "Valor") +
+  scale_fill_manual(values = c("ES" = "red", "ES70" = "green")) +
+  theme_minimal()
 
+# Muestra el gráfico
+print(grafico)
+
+```
 
 Bibliografía
 
