@@ -34,10 +34,10 @@ Nos centraremos en **3 OBJETIVOS PRINCIPALES.**
 
 ## Explicación de los objetivos
 
-> En estos objetivos, la idea principal es generar unos graficos comparativos con distintas variables y datos las cuales intentaremos explicar. Estos graficos los hemos generado usando el paquete de ***GGplot2***
->
-> A la hora de revisar las graficas, os encontrareís con codigo como este para su realización, por si os es de utilidad;
->
+En estos objetivos, la idea principal es generar unos graficos comparativos con distintas variables y datos las cuales intentaremos explicar. Estos graficos los hemos generado usando el paquete de ***GGplot2***
+
+A la hora de revisar las graficas, os encontrareís con codigo como este para su realización, por si os es de utilidad;
+
 > **EJEMPLO CODIGO DEL GRAFICO 3**
 >
 > ```{r}
