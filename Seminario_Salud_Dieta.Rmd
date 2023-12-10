@@ -107,18 +107,41 @@ print(datos_filtrados)
 ```
 
 ### Tercer Objetivo
-
 ```{r}
 # Lee el archivo CSV
-datos <- read.csv("Excels/mortality_county_all.csv", header = FALSE, sep = ",")
+datos <- read.csv("Excels/Cardiobascular.csv", header = FALSE, sep = ",")
 
-# Filtrar filas que comienzan con "Diabetes" en la primera columna
-datos_filtrados <- datos[grep("^Diabetes", datos$V1), ]
+# Transpone los datos
+datos_transpuestos <- t(datos)
 
-# Mostrar el resultado
-print(datos_filtrados)
+# Calcula el número de filas y columnas necesarias
+num_filas <- nrow(datos)
+num_columnas <- ncol(datos)
+
+# Calcula el número total de elementos y crea un vector con los datos en el orden deseado
+nuevo_vector <- unlist(datos_transpuestos)
+orden_columnas <- rep(1:num_columnas, each = num_filas)
+orden_filas <- rep(1:num_filas, times = num_columnas)
+orden_final <- order(orden_columnas, orden_filas)
+
+# Crea un nuevo marco de datos con la distribución rotativa
+nueva_tabla <- data.frame(matrix(nuevo_vector[orden_final], ncol = num_columnas, byrow = TRUE))
+
+# Asigna los nombres de las columnas con la primera fila
+colnames(nueva_tabla) <- as.character(datos[1, ])
+
+# Elimina la primera fila (que ahora es la cabecera de las columnas)
+nueva_tabla <- nueva_tabla[-1, ]
+
+# Filtrar las filas que tienen "Serie A" en la columna "Serie"
+nueva_tabla_filtrada <- subset(nueva_tabla, nueva_tabla$Serie == "Serie A")
+
+# Muestra el resultado
+print(nueva_tabla_filtrada)
+
 
 ```
+
 
 Bibliografía
 
