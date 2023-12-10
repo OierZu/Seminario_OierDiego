@@ -19,7 +19,7 @@ La obesidad es un problema de salud pública que ha alcanzado proporciones epid�
 
 ## Algunos datos que hemos obtendio y sus bases de datos de origen
 
-Este primer excel proviene de la base de datos del govierno datos.gob, en este podemos ver la relación entre la diabetes y la mortalidad que esta provoca. Aqui dejamos el url para que podais comprobarlo si quereis; <https://datos.gob.es/es/catalogo/a16003011-tasa-de-mortalidad-atribuida-a-la-diabetes-por-territorio-historico-y-sexo-indicadores-de-la-agenda-2030-c-a-de-euskadi1>
+### Primer Objetivo
 
 Este conjunto de datos proporciona datos de población no identificados sobre la prevalencia de comorbilidad de diabetes e hipertensión en el condado de Allegheny.Los datos son proporcionados por tres organizaciones de atención administrada en el condado de Allegheny. Las siglas de las columnas hacen referencia a: "CT"--\> Control de la diabetes, "BTPAD"--\> Presión arterial diastólica basal, "BTPAN"--\> Presión arterial sistólica basal, "BTWAD"--\> Presión arterial diastólica media, "BTWAN"\--\> Presión arterial istólica media. "BTMAD"--\> Presión arterial media arterial, "BTMAN"--\> Presión arterial media arterial normal.\
 Su enlace es [pinche aquí](https://catalog.data.gov/dataset/diabetes-hypertension-comorbidity)
@@ -56,6 +56,8 @@ print(nueva_tabla)
 
 
 ```
+
+### Segundo Objetivo
 
 El Departamento de Salud del Condado de Allegheny ha generado esta lista de restaurantes de comida rápida exportando todas las cadenas de restaurantes sin un permiso de alcohol del Sistema de Tarifas y Permisos del Condado. Una cadena de restaurantes definida por el Condado es cualquier restaurante que tiene más de una ubicación en el Condado. Las cadenas de restaurantes capturan cadenas locales y nacionales (incluidas las cadenas nacionales de propiedad local) siempre que haya uno o más establecimientos en funcionamiento dentro del condado. Para ver el enlace pulse [aquí](https://catalog.data.gov/dataset/allegheny-county-fast-food-establishments#sec-dates).
 
@@ -107,14 +109,14 @@ Bibliografía
 
 Aquí podeis encontrar las beses de datos que hemos utilizado para realizar este proyecto;
 
-- texto[<https://catalog.data.gov/dataset/?q=hypertension&sort=views_recent+desc&res_format=CSV&ext_location=&ext_bbox=&ext_prev_extent=&tags=hypertension>]
+-   texto[<https://catalog.data.gov/dataset/?q=hypertension&sort=views_recent+desc&res_format=CSV&ext_location=&ext_bbox=&ext_prev_extent=&tags=hypertension>]
 
-- texto[<https://www.niddk.nih.gov/>]
+-   texto[<https://www.niddk.nih.gov/>]
 
-- texto[<https://www.niddk.nih.gov/>]
+-   texto[<https://www.niddk.nih.gov/>]
 
-- texto[<https://www.data.gov/>]
+-   texto[<https://www.data.gov/>]
 
-- texto[<https://www.opendatasoft.com/>]
+-   texto[<https://www.opendatasoft.com/>]
 
-- Texto[Url] dt pakage que se vea el codigo buscar codigo en ingles
+-   Texto[Url] dt pakage que se vea el codigo buscar codigo en ingles
