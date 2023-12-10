@@ -54,9 +54,16 @@ nueva_tabla <- nueva_tabla[-1, ]
 # Muestra el resultado
 print(nueva_tabla)
 ```
+```{r}
 
+```
 
 ```{r}
+# Eliminar caracteres no numéricos o espacios en blanco
+nueva_tabla$BTPAD <- gsub("[^0-9.]", "", nueva_tabla$BTPAD)
+
+# Convertir a valores numéricos
+nueva_tabla$BTPAD <- as.numeric(nueva_tabla$BTPAD)
 
 # Genera un boxplot para la columna "BTPAD" de la tabla 'nueva_tabla'
 boxplot(nueva_tabla$BTPAD, col = "green", main = "Boxplot de BTPAD en nueva_tabla")
