@@ -53,10 +53,9 @@ nueva_tabla <- nueva_tabla[-1, ]
 
 # Muestra el resultado
 print(nueva_tabla)
-
-
-
 ```
+
+
 
 
 ### Segundo Objetivo
@@ -106,8 +105,22 @@ datos_filtrados <- datos[grep("Diabetes", datos$V1), ]
 print(datos_filtrados)
 
 ```
+```{r}
+# Crear gráfico de líneas
+grafico_lineas <- ggplot() +
+  geom_line(data = nueva_tabla, aes(x = Category, y = V4, group = 1), color = "blue") +
+  geom_line(data = datos_filtrados, aes(x = Category, y = V4, group = 1), color = "green") +
+  labs(title = "Gráfico de líneas por establecimiento",
+       x = "Tipo de establecimiento",
+       y = "Valor") +
+  theme_minimal()
 
+# Muestra el gráfico de líneas
+print(grafico_lineas)
+
+```
 ### Tercer Objetivo
+
 ```{r}
 # Lee el archivo CSV
 datos <- read.csv("Excels/Cardiovascular.csv", header = FALSE, sep = ",")
@@ -142,6 +155,7 @@ print(nueva_tabla_filtrada)
 
 
 ```
+
 ```{r}
 # Gráfica de barras
 grafico <- ggplot(nueva_tabla_filtrada, aes(x = Year, y = Value, fill = Territorio)) +
