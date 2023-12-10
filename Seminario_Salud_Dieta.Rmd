@@ -55,17 +55,37 @@ nueva_tabla <- nueva_tabla[-1, ]
 print(nueva_tabla)
 ```
 ```{r}
+# Suponiendo que copia_nueva_tabla es tu tabla original
+copia_nueva_tabla <- as.data.frame(lapply(nueva_tabla, as.numeric))
+
+print(copia_nueva_tabla)
+```
+
+```{r}
+# Convertir las columnas de la tabla a formato numérico
+copia_nueva_tabla_num <- as.data.frame(lapply(copia_nueva_tabla, as.numeric))
+
+# Generar boxplots para cada columna
+par(mfrow = c(2, 4))  # Configurar el diseño de la gráfica (2 filas x 4 columnas)
+for (col in names(copia_nueva_tabla_num)) {
+  boxplot(copia_nueva_tabla_num[[col]], col = "green", main = paste("Boxplot de", col))
+}
+
+```
+
+
+```{r}
 # Eliminar caracteres no numéricos o espacios en blanco en la columna "CT"
-nueva_tabla$CT <- gsub("[^0-9.]", "", nueva_tabla$CT)
+copia_nueva_tabla$CT <- gsub("[^0-9.]", "", copia_nueva_tabla$CT)
 
 # Convertir a valores numéricos
-nueva_tabla$CT <- as.numeric(nueva_tabla$CT)
+copia_nueva_tabla$CT <- as.numeric(copia_nueva_tabla$CT)
 
-# Generar un boxplot para la columna "CT" de la tabla 'nueva_tabla'
-boxplot(nueva_tabla$CT, col = "green", main = "Boxplot de CT en nueva_tabla")
+# Generar un boxplot para la columna "CT" de la tabla 'copia_nueva_tabla'
+boxplot(copia_nueva_tabla$CT, col = "green", main = "Boxplot de CT en copia_nueva_tabla")
 
-# Obtener los datos de la columna CT de nueva_tabla
-datos <- nueva_tabla$CT
+# Obtener los datos de la columna CT de copia_nueva_tabla
+datos <- copia_nueva_tabla$CT
 
 # Calcular la media y desviación estándar de los datos
 media <- mean(datos)
