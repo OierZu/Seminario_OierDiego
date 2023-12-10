@@ -50,10 +50,11 @@ objetivo 3;
 
 -   Aquí os dejamos un lista con los links y los sitios web que hemos consultado para llevar a cabo el trabajo.
 
-| **Información** | **Links** |
-|:----------------|:----------|
-| Diabetes        |           |
-| Obesidad        |           |
-|                 |           |
+| **Información**         | **Links** |
+|:------------------------|:----------|
+| Cardiovascular          | CSV       |
+| Diabetes e Hipertensión | CSV       |
+| Fasfood                 | CSV       |
+| Mortalidad              | CSV       |
 
 ![3](Fotos/Despedida.jpg)
