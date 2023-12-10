@@ -5,14 +5,8 @@ author:
 - Diego Ramirez
 date: "`r format(Sys.Date(), '%d de %B de %Y')`"
 output:
-  html_document:
-    theme: united 
-    highlight: tango
-    number_sections: true
-    toc: true
-      toc_float: true
-      smooth_scroll: true
-      collapsed: true
+  cleanrmd::html_document_clean:
+    theme: NULL
 ---
 
 # ¿De que trata el informe?
@@ -90,9 +84,9 @@ nueva_tabla <- nueva_tabla[-1, ]
 # Muestra el resultado
 print(nueva_tabla)
 ```
-Estos datos incluyen recuentos de muertes por raza (total, negros, blancos) por grupo de edad y causa de muerte por área censal agregada durante un período de cinco años (2014-18). Datos extraídos del Sistema Electrónico de Registro de Defunciones (EDRS) de Pensilvania con el siguiente descargo de responsabilidad.
-Nosotros hemos aislado los casos de muertes que nos interesan, es decir, diabetes, para así poder trabajar con ellos.
-Para acudir al enlace pulse [aquí](https://catalog.data.gov/dataset/allegheny-county-mortality-indicators).
+
+Estos datos incluyen recuentos de muertes por raza (total, negros, blancos) por grupo de edad y causa de muerte por área censal agregada durante un período de cinco años (2014-18). Datos extraídos del Sistema Electrónico de Registro de Defunciones (EDRS) de Pensilvania con el siguiente descargo de responsabilidad. Nosotros hemos aislado los casos de muertes que nos interesan, es decir, diabetes, para así poder trabajar con ellos. Para acudir al enlace pulse [aquí](https://catalog.data.gov/dataset/allegheny-county-mortality-indicators).
+
 ```{r}
 # Lee el archivo CSV
 datos <- read.csv("Excels/mortality_county_all.csv", header = FALSE, sep = ",")
