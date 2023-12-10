@@ -20,8 +20,8 @@ En este proyecto hemos tratado de abordar varias enfermedades que pueden ser **g
 
 Algunas de estas bases de datos han sido;
 
--   [Base de datos del govierno de España](https://datos.gob.es/es/)
--   [ ]()
+-   [Base de datos del gobierno de España](https://datos.gob.es/es/)
+-   [Base de datos del gobierno de Estados Unidos](https://data.gov/)
 -   [ ]()
 
 ## Objetivos principales 🎯
@@ -73,8 +73,8 @@ print(copia_nueva_tabla)
 ```{r}
 # Generar boxplots para cada columna
 par(mfrow = c(2, 4))  # Configurar el diseño de la gráfica (2 filas x 4 columnas)
-for (col in names(copia_nueva_tabla_num)) {
-  boxplot(copia_nueva_tabla_num[[col]], col = "green", main = paste("Boxplot de", col))
+for (col in names(copia_nueva_tabla)) {
+  boxplot(copia_nueva_tabla[[col]], col = "green", main = paste("Boxplot de", col))
 }
 
 ```

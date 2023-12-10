@@ -80,7 +80,7 @@ Por ultimo, en este tercer objetivo hemos comparado la tasa de mortalidad por en
 -   Aquí os dejamos un lista con los links y los sitios web que hemos consultado para llevar a cabo el trabajo.
 
 | **Información**         | **Links**                                                                                   |
-|:------------------------|:----------------------------------------------|
+|:------------------------|:--------------------------------------------------------------------------------------------|
 | Cardiovascular          | [CSV](https://www3.gobiernodecanarias.org/aplicaciones/appsistac/ods/3-4-1/)                |
 | Diabetes e Hipertensión | [CSV](https://catalog.data.gov/dataset/diabetes-hypertension-comorbidity)                   |
 | Fasfood                 | [CSV](https://catalog.data.gov/dataset/allegheny-county-fast-food-establishments#sec-dates) |
