@@ -8,15 +8,15 @@
 
 ![🥝](Fotos/Portada.jpg)
 
-## Indice
+## Índice
 
-1.  [¿Sobre que trata nuestra investigación?](#Punto-1-¿sobre%20que%20trata%20nuestra%20investigación?)
+1.  [Sección 1: ¿Sobre qué trata nuestra investigación?](#sección-1-¿Sobre-qué-trata-nuestra-investigación?)
 
-2.  [OBJETIVOS PRINCIPALES](#Punto-2-OBJETIVOS%20PRINCIPALES)
+2.  [Sección 2: OBJETIVOS PRINCIPALES](#sección-2-OBJETIVOS-PRINCIPALES) 2.1. [Subsección 2.1: Objetivo 1](#subsección-21-Objetivo-1) 2.2. [Subsección 2.2: Objetivo 2](#subsección-22-Objetivo-2) 2.3. [Subsección 2.3: Objetivo 3](#subsección-22-Objetivo-3)
 
-3.  [Explicación de los objetivos](#Punto-3-Explicación%20de%20los%20objetivos)
+3.  [Sección 3: Explicación de los objetivos](#sección-3-Explicación-de-los-objetivos) 3.1. [Subsección 3.1: Explicación Objetivo 1](#subsección-21-Explicación-Objetivo-1) 3.2. [Subsección 3.1: Explicación Objetivo 2](#subsección-21-Explicación-Objetivo-2) 3.3. [Subsección 3.1: Explicación Objetivo 3](#subsección-21-Explicación-Objetivo-3)
 
-4.  [Bibliografía](#Punto-4-Bibliografía)
+4.  [Sección 4: Bibliografía](#sección-4-Bibliografía)
 
 ### ¿Sobre qué trata nuestra investigación? [🔎](https://emojipedia.org/shortcodes)
 
