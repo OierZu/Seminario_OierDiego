@@ -9,7 +9,7 @@ output:
     toc: true
       toc_float: true
       smooth_scroll: true
-      collapsed: true
+      collapsed: false
     number_sections: true
       theme: NULL
 ---
@@ -27,7 +27,7 @@ Su enlace es [pinche aquí](https://catalog.data.gov/dataset/diabetes-hypertensi
 
 ```{r}
 # Lee el archivo CSV
-datos <- read.csv("Excels/diabetes_hypertension_all_2016 (1).csv", header = FALSE, sep = ";")
+datos <- read.csv("Excels/DiabetesHipertension.csv", header = FALSE, sep = ";")
 
 # Transpone los datos
 datos_transpuestos <- t(datos)
@@ -64,7 +64,7 @@ El Departamento de Salud del Condado de Allegheny ha generado esta lista de rest
 
 ```{r}
 # Lee el archivo CSV
-datos <- read.csv("Excels/fastfoodalleghenycountyupdatexy2.csv", header = FALSE, sep = ",")
+datos <- read.csv("Excels/FastFood.csv", header = FALSE, sep = ",")
 
 # Transpone los datos
 datos_transpuestos <- t(datos)
