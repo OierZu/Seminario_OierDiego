@@ -26,45 +26,43 @@ Este conjunto de datos proporciona datos de población no identificados sobre la
 Su enlace es [pinche aquí](https://catalog.data.gov/dataset/diabetes-hypertension-comorbidity)
 
 ```{r}
-# Lee el archivo CSV
+#Primero procedemos a leer el archivo CSV con la posición del archivo, además indicamos que no tienen título las columnas y su separador es ";".
 datos <- read.csv("Excels/DiabetesHipertension.csv", header = FALSE, sep = ";")
 
-# Transpone los datos
+# Posteriormente trasponemos los datos reorganizándolos en un formato diferente.
 datos_transpuestos <- t(datos)
 
-# Calcula el número de filas y columnas necesarias
+# Después contamos el número de filas y columnas que hay en ese formato.
 num_filas <- nrow(datos)
 num_columnas <- ncol(datos)
 
-# Calcula el número total de elementos y crea un vector con los datos en el orden deseado
+# Calculamos y creamos un vector con los datos deseados.
 nuevo_vector <- unlist(datos_transpuestos)
 orden_columnas <- rep(1:num_columnas, each = num_filas)
 orden_filas <- rep(1:num_filas, times = num_columnas)
 orden_final <- order(orden_columnas, orden_filas)
 
-# Crea un nuevo marco de datos con la distribución rotativa
+# Creamos una nueva gráfica con los vectores deseados siguiendo un diseño de matriz específico.
 nueva_tabla <- data.frame(matrix(nuevo_vector[orden_final], ncol = num_columnas, byrow = TRUE))
 
-# Asigna los nombres de las columnas con la primera fila
+# Asignamos los nombres de las columnas de la primera fila.
 colnames(nueva_tabla) <- as.character(datos[1, ])
 
-# Elimina la primera fila (que ahora es la cabecera de las columnas)
+# Eliminamos la primera fila
 nueva_tabla <- nueva_tabla[-1, ]
 
-# Muestra el resultado
+# Finalmente mostramos el resultado
 print(nueva_tabla)
 ```
+
 ```{r}
-# Suponiendo que copia_nueva_tabla es tu tabla original
+# La tabla anterior estaba con datos "character" por los que los pasamos a datos numéricos para poder trabajar con ellos"
 copia_nueva_tabla <- as.data.frame(lapply(nueva_tabla, as.numeric))
 
 print(copia_nueva_tabla)
 ```
 
 ```{r}
-# Convertir las columnas de la tabla a formato numérico
-copia_nueva_tabla_num <- as.data.frame(lapply(copia_nueva_tabla, as.numeric))
-
 # Generar boxplots para cada columna
 par(mfrow = c(2, 4))  # Configurar el diseño de la gráfica (2 filas x 4 columnas)
 for (col in names(copia_nueva_tabla_num)) {
@@ -73,79 +71,78 @@ for (col in names(copia_nueva_tabla_num)) {
 
 ```
 
+#### Conclusión
+
+Una vez obtenidos estos Boxplots de las diferentes columnas, podemos comprobar con los datos del gobierno de EEUU de salud cuáles son los parámetros normales y compararlos con la media de nuestros resultados, observando que ciertamente son superiores en todos sus parámetros.
 
 ### Segundo Objetivo
 
 Estos datos incluyen recuentos de muertes por raza (total, negros, blancos) por grupo de edad y causa de muerte por área censal agregada durante un período de cinco años (2014-18). Datos extraídos del Sistema Electrónico de Registro de Defunciones (EDRS) de Pensilvania con el siguiente descargo de responsabilidad. Nosotros hemos aislado los casos de muertes que nos interesan, es decir, diabetes, para así poder trabajar con ellos. Para acudir al enlace pulse [aquí](https://catalog.data.gov/dataset/allegheny-county-mortality-indicators).
 
-
 ```{r}
-# Lee el archivo CSV
+# Leemos el archivo CSV indicandos su ruta en el código.
 datos <- read.csv("Excels/mortality_county_all.csv", header = FALSE, sep = ",")
 
-# Filtrar filas que comienzan con "Diabetes" en la primera columna
+# Filtramos filas que comienzan por "Diabetes" y se encuentran en la columna "V1"
 datos_filtrados <- datos[grep("Diabetes", datos$V1), ]
 
-# Mostrar el resultado
+# Mostramos el resultado de la tabla con la información que nos interesa.
 print(datos_filtrados)
 
 
 ```
 
+A continuación procedemos a usar una gráfica combinada de líneas y puntos para poder comprobar la tasa de mortalidad por diabetes según la raza (blancos y negros), a su vez que la comparamos con la edad de los fallecidos. Un punto a tener en cuenta cuando observamos esta gráfica es que el eje Y (Nº de muertes) no está ordenado por lo que sólo debemos fijarnos en las zonas donde se encuentran los púntos, haciendo referencia a los intervalos de edad ofrecidos por el CSV.
+
 ```{r}
 library(ggplot2)
 library(dplyr)
-
-# Ordenar datos por la columna V4 en orden ascendente
-datos_filtrados <- datos_filtrados %>% 
-  arrange(V4)
-
-# Convertir V3 a factor para evitar errores si es numérico
-datos_filtrados$V3 <- as.factor(datos_filtrados$V3)
-
+# Creamos un gráfico utilizando ggplot
 ggplot(datos_filtrados, aes(x = V3, y = V4, color = V2, group = V2)) +
-  geom_line() +
-  geom_point() +
+  geom_line() + #Añadimos las líneas
+  geom_point() + #Añadimos los puntos
   labs(x = "Edad", y = "Número de muertos") +
-  scale_color_manual(values = c("BLACK" = "red", "WHITE" = "blue")) +
-  theme_minimal()
+  scale_color_manual(values = c("BLACK" = "red", "WHITE" = "blue")) + #Indicamos los valores y colores de cada línea/punto.
+  theme_minimal() #ggplot2 nos ofrece distintas salidas visuales, elegimos esta por su simplicidad
 
 
 ```
 
-### Tercer Objetivo
+#### Conclusión
 
+### Tercer Objetivo
+A continuación procedemos a utlizar una gráfica de barras/columnas, en las que indicaremos de 2 colores (rojo y verde) cada lugar de origen (España e Islas Canarias). El eje de las X corresponde a los años trascurridos en los que se han recogido datos. El eje de las Y hace referencia a las cifras de fallecidos por enfermedades cardiovasculares.
 ```{r}
 library(ggplot2)
-# Lee el archivo CSV
+# Leemos el archivo CSV indicando la ruta en la que se encuentra
 datos <- read.csv("Excels/Cardiovascular.csv", header = FALSE, sep = ",")
 
-# Transpone los datos
+# Transponemos los datos para organizarlos en un formato diferente
 datos_transpuestos <- t(datos)
 
-# Calcula el número de filas y columnas necesarias
+# Calculamos el número de filas y columnas que hay realmente en el archivo comprimido.
 num_filas <- nrow(datos)
 num_columnas <- ncol(datos)
 
-# Calcula el número total de elementos y crea un vector con los datos en el orden deseado
+# Posteriormente calculamos el num total de elementos y creamos un vextor con los datos.
 nuevo_vector <- unlist(datos_transpuestos)
 orden_columnas <- rep(1:num_columnas, each = num_filas)
 orden_filas <- rep(1:num_filas, times = num_columnas)
 orden_final <- order(orden_columnas, orden_filas)
 
-# Crea un nuevo marco de datos con la distribución rotativa
+# Creamos un nuevo data frame llamado "nueva_tabla" organizando un vector en una matriz con el número de columnas indicadas.
 nueva_tabla <- data.frame(matrix(nuevo_vector[orden_final], ncol = num_columnas, byrow = TRUE))
 
-# Asigna los nombres de las columnas con la primera fila
+# Asignamos los nombres de las columnas con la primera fila
 colnames(nueva_tabla) <- as.character(datos[1, ])
 
-# Elimina la primera fila (que ahora es la cabecera de las columnas)
+# Eliminamos la primera fila (que ahora es la cabecera de las columnas)
 nueva_tabla <- nueva_tabla[-1, ]
 
-# Filtrar las filas que tienen "Serie A" en la columna "Serie"
+# Filtramos las filas que tienen "Serie A" en la columna "Serie", es decir, todas las de "Enfermedades cardiovasculares".
 nueva_tabla_filtrada <- subset(nueva_tabla, nueva_tabla$Serie == "Serie A")
 
-# Muestra el resultado
+# Finalmente mostramos el resultado.
 print(nueva_tabla_filtrada)
 
 
@@ -181,6 +178,10 @@ grafico <- ggplot(nueva_tabla_filtrada, aes(x = Year, y = Value, fill = Territor
 print(grafico)
 
 ```
+#### Conclusión
+Como podemos observar en esta gráfica en la parte superior, la tasa de mortalidad por enfermedades cardiovasculares, cada año está subiendo más y más en "ES70", es decir, las Islas Canarias, mientras que en "ES" (España), va disminuyendo notablemente. Este dato nos impacta ya que ambos datos están recopilados en "por 100.000 habitantes" y España es notablemente más grande demográficamente que las Islas Canarias y, sin embargo, cada vez está más cerca de alcanzar los datos de la península.
+Como conclusión de esta gráfica podemos corroborar algunos artículos como [este](https://www.eldiario.es/canariasahora/canarias-opina/obesidad-problema-social-canarias_1_10567486.html) en el que índica que cada vez hay más y más obesidad entre la población canaria.
+
 
 Bibliografía
 
