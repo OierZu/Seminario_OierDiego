@@ -161,6 +161,8 @@ datos que hemos obtendio y sus bases de datos de origen</a>
 Objetivo</a></li>
 <li><a href="#segundo-objetivo" id="toc-segundo-objetivo">Segundo
 Objetivo</a></li>
+<li><a href="#tercer-objetivo" id="toc-tercer-objetivo">Tercer
+Objetivo</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -188,7 +190,7 @@ Su enlace es <a
 href="https://catalog.data.gov/dataset/diabetes-hypertension-comorbidity">pinche
 aquí</a></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Lee el archivo CSV</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>datos <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;Excels/diabetes_hypertension_all_2016 (1).csv&quot;</span>, <span class="at">header =</span> <span class="cn">FALSE</span>, <span class="at">sep =</span> <span class="st">&quot;;&quot;</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>datos <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;Excels/DiabetesHipertension.csv&quot;</span>, <span class="at">header =</span> <span class="cn">FALSE</span>, <span class="at">sep =</span> <span class="st">&quot;;&quot;</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Transpone los datos</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>datos_transpuestos <span class="ot">&lt;-</span> <span class="fu">t</span>(datos)</span>
@@ -617,7 +619,7 @@ establecimientos en funcionamiento dentro del condado. Para ver el
 enlace pulse <a
 href="https://catalog.data.gov/dataset/allegheny-county-fast-food-establishments#sec-dates">aquí</a>.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Lee el archivo CSV</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>datos <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;Excels/fastfoodalleghenycountyupdatexy2.csv&quot;</span>, <span class="at">header =</span> <span class="cn">FALSE</span>, <span class="at">sep =</span> <span class="st">&quot;,&quot;</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>datos <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;Excels/FastFood.csv&quot;</span>, <span class="at">header =</span> <span class="cn">FALSE</span>, <span class="at">sep =</span> <span class="st">&quot;,&quot;</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Transpone los datos</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>datos_transpuestos <span class="ot">&lt;-</span> <span class="fu">t</span>(datos)</span>
@@ -4011,7 +4013,7 @@ href="https://catalog.data.gov/dataset/allegheny-county-mortality-indicators">aq
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>datos <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;Excels/mortality_county_all.csv&quot;</span>, <span class="at">header =</span> <span class="cn">FALSE</span>, <span class="at">sep =</span> <span class="st">&quot;,&quot;</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtrar filas que comienzan con &quot;Diabetes&quot; en la primera columna</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>datos_filtrados <span class="ot">&lt;-</span> datos[<span class="fu">grep</span>(<span class="st">&quot;^Diabetes&quot;</span>, datos<span class="sc">$</span>V1), ]</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>datos_filtrados <span class="ot">&lt;-</span> datos[<span class="fu">grep</span>(<span class="st">&quot;Diabetes&quot;</span>, datos<span class="sc">$</span>V1), ]</span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Mostrar el resultado</span></span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(datos_filtrados)</span></code></pre></div>
@@ -4038,6 +4040,115 @@ href="https://catalog.data.gov/dataset/allegheny-county-mortality-indicators">aq
 ## 109 Diabetes WHITE 75-84 327
 ## 110 Diabetes WHITE   85+ 416
 ## 111 Diabetes WHITE    &lt;1   0</code></pre>
+<h3 id="tercer-objetivo">Tercer Objetivo</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Lee el archivo CSV</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>datos <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;Excels/Cardiovascular.csv&quot;</span>, <span class="at">header =</span> <span class="cn">FALSE</span>, <span class="at">sep =</span> <span class="st">&quot;,&quot;</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Transpone los datos</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>datos_transpuestos <span class="ot">&lt;-</span> <span class="fu">t</span>(datos)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcula el número de filas y columnas necesarias</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>num_filas <span class="ot">&lt;-</span> <span class="fu">nrow</span>(datos)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>num_columnas <span class="ot">&lt;-</span> <span class="fu">ncol</span>(datos)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcula el número total de elementos y crea un vector con los datos en el orden deseado</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>nuevo_vector <span class="ot">&lt;-</span> <span class="fu">unlist</span>(datos_transpuestos)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>orden_columnas <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span>num_columnas, <span class="at">each =</span> num_filas)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>orden_filas <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span>num_filas, <span class="at">times =</span> num_columnas)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>orden_final <span class="ot">&lt;-</span> <span class="fu">order</span>(orden_columnas, orden_filas)</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Crea un nuevo marco de datos con la distribución rotativa</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>nueva_tabla <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">matrix</span>(nuevo_vector[orden_final], <span class="at">ncol =</span> num_columnas, <span class="at">byrow =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Asigna los nombres de las columnas con la primera fila</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(nueva_tabla) <span class="ot">&lt;-</span> <span class="fu">as.character</span>(datos[<span class="dv">1</span>, ])</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Elimina la primera fila (que ahora es la cabecera de las columnas)</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>nueva_tabla <span class="ot">&lt;-</span> nueva_tabla[<span class="sc">-</span><span class="dv">1</span>, ]</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtrar las filas que tienen &quot;Serie A&quot; en la columna &quot;Serie&quot;</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>nueva_tabla_filtrada <span class="ot">&lt;-</span> <span class="fu">subset</span>(nueva_tabla, nueva_tabla<span class="sc">$</span>Serie <span class="sc">==</span> <span class="st">&quot;Serie A&quot;</span>)</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Muestra el resultado</span></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(nueva_tabla_filtrada)</span></code></pre></div>
+<pre><code>##    Year                  Units Territorio   Serie            Tipo de enfermedad
+## 2  2010 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
+## 3  2011 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
+## 4  2012 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
+## 5  2013 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
+## 6  2014 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
+## 7  2015 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
+## 8  2016 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
+## 9  2017 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
+## 10 2018 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
+## 11 2019 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
+## 12 2020 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
+## 13 2021 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
+## 50 2010 Por 100.000 habitantes       ES70 Serie A Enfermedades cardiovasculares
+## 51 2011 Por 100.000 habitantes       ES70 Serie A Enfermedades cardiovasculares
+## 52 2012 Por 100.000 habitantes       ES70 Serie A Enfermedades cardiovasculares
+## 53 2013 Por 100.000 habitantes       ES70 Serie A Enfermedades cardiovasculares
+## 54 2014 Por 100.000 habitantes       ES70 Serie A Enfermedades cardiovasculares
+## 55 2015 Por 100.000 habitantes       ES70 Serie A Enfermedades cardiovasculares
+## 56 2016 Por 100.000 habitantes       ES70 Serie A Enfermedades cardiovasculares
+## 57 2017 Por 100.000 habitantes       ES70 Serie A Enfermedades cardiovasculares
+## 58 2018 Por 100.000 habitantes       ES70 Serie A Enfermedades cardiovasculares
+## 59 2019 Por 100.000 habitantes       ES70 Serie A Enfermedades cardiovasculares
+## 60 2020 Por 100.000 habitantes       ES70 Serie A Enfermedades cardiovasculares
+## 61 2021 Por 100.000 habitantes       ES70 Serie A Enfermedades cardiovasculares
+##     Value
+## 2  255.85
+## 3  253.18
+## 4  261.08
+## 5  252.15
+## 6  252.70
+## 7  267.61
+## 8  257.87
+## 9  263.18
+## 10 258.64
+## 11 247.56
+## 12 253.09
+## 13 251.83
+## 50 162.63
+## 51 162.54
+## 52 165.71
+## 53 147.60
+## 54 164.65
+## 55 192.31
+## 56 198.02
+## 57 196.34
+## 58 212.40
+## 59 192.50
+## 60 201.24
+## 61 212.93</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cargar la biblioteca ggplot2</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 4.3.2</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Resto de tu código</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>grafico <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(nueva_tabla_filtrada, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Value, <span class="at">fill =</span> Territorio)) <span class="sc">+</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Gráfico de barras por Territorio&quot;</span>,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Año&quot;</span>,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Valor&quot;</span>) <span class="sc">+</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;ES&quot;</span> <span class="ot">=</span> <span class="st">&quot;red&quot;</span>, <span class="st">&quot;ES70&quot;</span> <span class="ot">=</span> <span class="st">&quot;green&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Muestra el gráfico</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafico)</span></code></pre></div>
+<p><img src="Seminario_Salud_Dieta_files/figure-html5/unnamed-chunk-5-1.png" width="960" /></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gráfica de barras</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>grafico <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(nueva_tabla_filtrada, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Value, <span class="at">fill =</span> Territorio)) <span class="sc">+</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Gráfico de barras por Territorio&quot;</span>,</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Año&quot;</span>,</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Valor&quot;</span>) <span class="sc">+</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;ES&quot;</span> <span class="ot">=</span> <span class="st">&quot;red&quot;</span>, <span class="st">&quot;ES70&quot;</span> <span class="ot">=</span> <span class="st">&quot;green&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Muestra el gráfico</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafico)</span></code></pre></div>
+<p><img src="Seminario_Salud_Dieta_files/figure-html5/unnamed-chunk-5-2.png" width="960" /></p>
 <p>Bibliografía</p>
 <p>Aquí podeis encontrar las beses de datos que hemos utilizado para
 realizar este proyecto;</p>
