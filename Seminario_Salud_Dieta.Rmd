@@ -55,8 +55,34 @@ nueva_tabla <- nueva_tabla[-1, ]
 print(nueva_tabla)
 ```
 
+```{r}
+# Genera un boxplot para la columna "BTPAD" de la tabla 'nueva_tabla'
+boxplot(nueva_tabla$BTPAD, col = "green", main = "Boxplot de BTPAD en nueva_tabla")
+
+# Obtener los datos de la columna BTPAD de nueva_tabla
+datos <- nueva_tabla$BTPAD
+
+# Calcular la media y desviación estándar de los datos
+media <- mean(datos)
+desviacion <- sd(datos)
+
+# Generar datos para la campana de Gauss
+x <- seq(min(datos), max(datos), length.out = 1000)  # Valores x para la curva de la campana de Gauss
+densidad <- dnorm(x, mean = media, sd = desviacion)  # Calcula los valores de densidad en la distribución normal
+
+# Graficar la campana de Gauss
+plot(x, densidad, type = "l", col = "blue", lwd = 2,
+     main = "Campana de Gauss (Distribución Normal)", 
+     xlab = "Valores", ylab = "Densidad")
+
+# Calcular los percentiles 25, 50 y 75 en los datos
+percentiles <- quantile(datos, c(0.25, 0.5, 0.75))
+
+# Graficar líneas verticales en los percentiles
+abline(v = percentiles, col = c("red", "green", "blue"), lty = 2)
 
 
+```
 
 ### Segundo Objetivo
 
@@ -105,6 +131,7 @@ datos_filtrados <- datos[grep("Diabetes", datos$V1), ]
 print(datos_filtrados)
 
 ```
+
 ```{r}
 # Crear gráfico de líneas
 grafico_lineas <- ggplot() +
@@ -119,6 +146,7 @@ grafico_lineas <- ggplot() +
 print(grafico_lineas)
 
 ```
+
 ### Tercer Objetivo
 
 ```{r}
