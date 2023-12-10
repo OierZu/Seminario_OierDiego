@@ -25,13 +25,15 @@ Algunas de estas bases de datos han sido;
 -   [Base de datos del gobierno de E.E.U.U](https://data.gov)
 -   Entre otras las cuales mencionamos al final de este proyecto en su respectiva bibliografía.
 
-## Objetivos principales 🎯
+## Explicación objetivos
 
 A lo largo de nuestra busqueda de datos que tratar para nuestra investigación, hemos llegado a la conclusión de dividir esta investigación en **3 objetivos principales**, los cuales seran explicados individualmente en el siguiente apartado.
 
 En estos 3 objetivos hemos usado datos e información diversa la cual hemos tratado de relacionar generando graficas distintas en cada uno de estos para poder visualizar con mayor facilidad estos datos.
 
-También es importante mencionar que estos conjuntos de datos los hemos obtenido a partir de archivos **CSV** que hemos descargado he importado en este trabajo, los cuales hemos sacado de algunas de las bases de datos mencionadas anteriormente.
+También es importante mencionar que estos conjuntos de datos los hemos obtenido a partir de archivos **CSV** que hemos descargado he importado en este trabajo. Estos **CSV** los hemos sacado de algunas de las bases de datos mencionadas anteriormente.
+
+## Objetivos principales 🎯
 
 ### Primer Objetivo
 
