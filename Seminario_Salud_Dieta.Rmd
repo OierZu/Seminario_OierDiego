@@ -217,8 +217,7 @@ grafico <- ggplot(nueva_tabla_filtrada, aes(x = Year, y = Value, fill = Territor
   scale_fill_manual(values = c("ES" = "red", "ES70" = "green")) +
   theme_minimal()
 
-# Muestra el gráfico
-print(grafico)
+
 
 ```
 
