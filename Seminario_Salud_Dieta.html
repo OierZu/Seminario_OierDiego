@@ -25,8 +25,8 @@ code, code * { font-family: inherit; }
 </style>
 
   
-  <link href="Seminario_Salud_Dieta_files/cleanrmd-0.1.1.9000/theme-picker.css" rel="stylesheet" />
-  <script src="Seminario_Salud_Dieta_files/cleanrmd-0.1.1.9000/theme-picker.js"></script>
+  <link href="Seminario_Salud_Dieta_files/cleanrmd-0.1.1/theme-picker.css" rel="stylesheet" />
+  <script src="Seminario_Salud_Dieta_files/cleanrmd-0.1.1/theme-picker.js"></script>
   <script id="theme-picker-themes" type="application/json">[{"name":"almond","src":"almond/almond.css"},{"name":"awsm.css","src":"awsm.css/awsm.css"},{"name":"axist","src":"axist/axist.css"},{"name":"bamboo","src":"bamboo/bamboo.css"},{"name":"bullframe","src":"bullframe/bullframe.css"},{"name":"holiday","src":"holiday/holiday.css"},{"name":"kacit","src":"kacit/kacit.css"},{"name":"latex.css","src":"latex.css/latex.css"},{"name":"markdown-splendor","src":"markdown-splendor/markdown-splendor.css"},{"name":"markdown-retro","src":"markdown-retro/markdown-retro.css"},{"name":"markdown-air","src":"markdown-air/markdown-air.css"},{"name":"markdown-modest","src":"markdown-modest/markdown-modest.css"},{"name":"marx","src":"marx/marx.css"},{"name":"minicss","src":"minicss/minicss.css"},{"name":"new.css","src":"new.css/new.css"},{"name":"no-class","src":"no-class/no-class.css"},{"name":"picocss","src":"picocss/pico.css"},{"name":"sakura","src":"sakura/sakura.css"},{"name":"sakura-vader","src":"sakura-vader/sakura-vader.css"},{"name":"semantic","src":"semantic/semantic.css"},{"name":"simplecss","src":"simplecss/simple.css"},{"name":"style-sans","src":"style-sans/style-sans.css"},{"name":"style-serif","src":"style-serif/style-serif.css"},{"name":"stylize","src":"stylize/stylize.css"},{"name":"superstylin","src":"superstylin/superstylin.css"},{"name":"tacit","src":"tacit/tacit.css"},{"name":"vanilla","src":"vanilla/vanilla.css"},{"name":"water","src":"water/water.css"},{"name":"water-dark","src":"water-dark/water-dark.css"},{"name":"writ","src":"writ/writ.css"}]</script>
 
 <style type="text/css" charset="utf-8">
@@ -265,6 +265,7 @@ href="https://catalog.data.gov/dataset/diabetes-hypertension-comorbidity">CSV</a
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># La tabla anterior estaba con datos &quot;character&quot; por los que los pasamos a datos numéricos para poder trabajar con ellos&quot;</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>copia_nueva_tabla <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">lapply</span>(nueva_tabla, as.numeric))</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<<<<<<< HEAD
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(copia_nueva_tabla)</span></code></pre></div>
 <pre><code>##         CT BTPAD BTPAN BTWAD BTWAN BTMAD BTMAN
 ## 1    10300   422    18   197     8   225    10
@@ -658,6 +659,17 @@ href="https://catalog.data.gov/dataset/diabetes-hypertension-comorbidity">CSV</a
 ## 389 980100     7     0     6     0     1     0
 ## 390 980700     9     0     5     0     4     0</code></pre>
 <h4 id="elaboración-boxplot">Elaboración Boxplot 🛠️</h4>
+=======
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(copia_nueva_tabla)</span></code></pre></div>
+<pre><code>##      CT BTPAD BTPAN BTWAD BTWAN BTMAD BTMAN
+## 1 10300   422    18   197     8   225    10
+## 2 20100  2610    70  1242    22  1368    48
+## 3 20300   354    11   175     3   179     8
+## 4 30500   859   121   553    93   306    28
+## 5 40200   388    37   233    25   155    12
+## 6 40500   215    15   121     9    94     6</code></pre>
+<h4 id="elaboración-boxplot">Elaboración Boxplot</h4>
+>>>>>>> 968489807ca50d4b59897e746c9dfc52448163c6
 <p>Para la elaboración de esta gráfica, entre ambos compañeros decidimos
 que la mejor idea podría ser crear una “Boxplot”(El Diagrama de Caja y
 bigotes es un tipo de gráfico que muestra un resumen de una gran
@@ -673,7 +685,11 @@ para aprender a crearlos.</p>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">boxplot</span>(copia_nueva_tabla[[col]], <span class="at">col =</span> <span class="st">&quot;green&quot;</span>, <span class="at">main =</span> <span class="fu">paste</span>(<span class="st">&quot;Boxplot de&quot;</span>, col))</span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p><img src="Seminario_Salud_Dieta_files/figure-html5/unnamed-chunk-3-1.png" width="960" /></p>
+<<<<<<< HEAD
 <h4 id="conclusión-objetivo-1">Conclusión objetivo 1 📝</h4>
+=======
+<h4 id="conclusión-objetivo-1">Conclusión objetivo 1</h4>
+>>>>>>> 968489807ca50d4b59897e746c9dfc52448163c6
 <p>Una vez obtenidos estos Boxplots de las diferentes columnas, podemos
 comprobar con los datos del gobierno de EEUU de salud cuáles son los
 parámetros normales y compararlos con la media de nuestros resultados,
@@ -728,6 +744,7 @@ referencia a los intervalos de edad ofrecidos por el CSV.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
 <pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 4.3.2</code></pre>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 4.3.2</code></pre>
 <pre><code>## 
 ## Attaching package: &#39;dplyr&#39;</code></pre>
 <pre><code>## The following objects are masked from &#39;package:stats&#39;:
@@ -736,15 +753,29 @@ referencia a los intervalos de edad ofrecidos por el CSV.</p>
 <pre><code>## The following objects are masked from &#39;package:base&#39;:
 ## 
 ##     intersect, setdiff, setequal, union</code></pre>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creamos un gráfico utilizando ggplot</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(datos_filtrados, <span class="fu">aes</span>(<span class="at">x =</span> V3, <span class="at">y =</span> V4, <span class="at">color =</span> V2, <span class="at">group =</span> V2)) <span class="sc">+</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> <span class="co">#Añadimos las líneas</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="co">#Añadimos los puntos</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Edad&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Número de muertos&quot;</span>) <span class="sc">+</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;BLACK&quot;</span> <span class="ot">=</span> <span class="st">&quot;red&quot;</span>, <span class="st">&quot;WHITE&quot;</span> <span class="ot">=</span> <span class="st">&quot;blue&quot;</span>)) <span class="sc">+</span> <span class="co">#Indicamos los valores y colores de cada línea/punto.</span></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="co">#ggplot2 nos ofrece distintas salidas visuales, elegimos esta por su simplicidad</span></span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creamos un gráfico utilizando ggplot</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(datos_filtrados, <span class="fu">aes</span>(<span class="at">x =</span> V3, <span class="at">y =</span> V4, <span class="at">color =</span> V2, <span class="at">group =</span> V2)) <span class="sc">+</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> <span class="co">#Añadimos las líneas</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="co">#Añadimos los puntos</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Edad&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Número de muertos&quot;</span>) <span class="sc">+</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;BLACK&quot;</span> <span class="ot">=</span> <span class="st">&quot;red&quot;</span>, <span class="st">&quot;WHITE&quot;</span> <span class="ot">=</span> <span class="st">&quot;blue&quot;</span>)) <span class="sc">+</span> <span class="co">#Indicamos los valores y colores de cada línea/punto.</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="co">#ggplot2 nos ofrece distintas salidas visuales, elegimos esta por su simplicidad</span></span></code></pre></div>
 <p><img src="Seminario_Salud_Dieta_files/figure-html5/unnamed-chunk-5-1.png" width="960" /></p>
+<<<<<<< HEAD
 <h4 id="conclusión-objetivo-2">Conclusión objetivo 2 📝</h4>
+=======
+<h4 id="conclusión">Conclusión</h4>
+<p>A partir de los datos gráficos obtenidos, es posible inferir una
+correlación entre la diabetes tipo 2 y la pertenencia étnica (blanca o
+negra).Estas conclusiones respaldan en parte lo que dicen los artículos
+sobre este tema, mostrando que la raza tiene importancia en cómo se
+manifiesta esta condición médica. He <a
+href="https://www.aarp.org/espanol/salud/vida-saludable/info-2018/raza-y-el-riesgo-de-diabetes.html">aquí</a>
+un artículo que lo respalda. Gracias a esta gráfica también podemos
+observar que otra relación entre la edad y el nº de muertes por esta
+causa. ### Tercer Objetivo</p>
+<h4 id="conclusión-objetivo-2">Conclusión objetivo 2</h4>
+>>>>>>> 968489807ca50d4b59897e746c9dfc52448163c6
 <p>A partir de los datos gráficos obtenidos, es posible inferir una
 correlación entre la diabetes tipo 2 y la pertenencia étnica (blanca o
 negra).Estas conclusiones respaldan en parte lo que dicen los artículos
@@ -761,116 +792,84 @@ en las que indicaremos de 2 colores (rojo y verde) cada lugar de origen
 trascurridos en los que se han recogido datos. El eje de las Y hace
 referencia a las cifras de fallecidos por enfermedades
 cardiovasculares.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Leemos el archivo CSV indicando la ruta en la que se encuentra</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>datos <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;Excels/Cardiovascular.csv&quot;</span>, <span class="at">header =</span> <span class="cn">FALSE</span>, <span class="at">sep =</span> <span class="st">&quot;,&quot;</span>)</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Transponemos los datos para organizarlos en un formato diferente</span></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>datos_transpuestos <span class="ot">&lt;-</span> <span class="fu">t</span>(datos)</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculamos el número de filas y columnas que hay realmente en el archivo comprimido.</span></span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>num_filas <span class="ot">&lt;-</span> <span class="fu">nrow</span>(datos)</span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>num_columnas <span class="ot">&lt;-</span> <span class="fu">ncol</span>(datos)</span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Posteriormente calculamos el num total de elementos y creamos un vextor con los datos.</span></span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>nuevo_vector <span class="ot">&lt;-</span> <span class="fu">unlist</span>(datos_transpuestos)</span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>orden_columnas <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span>num_columnas, <span class="at">each =</span> num_filas)</span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>orden_filas <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span>num_filas, <span class="at">times =</span> num_columnas)</span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>orden_final <span class="ot">&lt;-</span> <span class="fu">order</span>(orden_columnas, orden_filas)</span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Creamos un nuevo data frame llamado &quot;nueva_tabla&quot; organizando un vector en una matriz con el número de columnas indicadas.</span></span>
-<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>nueva_tabla <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">matrix</span>(nuevo_vector[orden_final], <span class="at">ncol =</span> num_columnas, <span class="at">byrow =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Asignamos los nombres de las columnas con la primera fila</span></span>
-<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(nueva_tabla) <span class="ot">&lt;-</span> <span class="fu">as.character</span>(datos[<span class="dv">1</span>, ])</span>
-<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Eliminamos la primera fila (que ahora es la cabecera de las columnas)</span></span>
-<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>nueva_tabla <span class="ot">&lt;-</span> nueva_tabla[<span class="sc">-</span><span class="dv">1</span>, ]</span>
-<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtramos las filas que tienen &quot;Serie A&quot; en la columna &quot;Serie&quot;, es decir, todas las de &quot;Enfermedades cardiovasculares&quot;.</span></span>
-<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>nueva_tabla_filtrada <span class="ot">&lt;-</span> <span class="fu">subset</span>(nueva_tabla, nueva_tabla<span class="sc">$</span>Serie <span class="sc">==</span> <span class="st">&quot;Serie A&quot;</span>)</span>
-<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Finalmente mostramos el resultado.</span></span>
-<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(nueva_tabla_filtrada)</span></code></pre></div>
-<pre><code>##    Year                  Units Territorio   Serie            Tipo de enfermedad
-## 2  2010 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
-## 3  2011 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
-## 4  2012 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
-## 5  2013 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
-## 6  2014 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
-## 7  2015 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
-## 8  2016 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
-## 9  2017 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
-## 10 2018 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
-## 11 2019 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
-## 12 2020 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
-## 13 2021 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
-## 50 2010 Por 100.000 habitantes       ES70 Serie A Enfermedades cardiovasculares
-## 51 2011 Por 100.000 habitantes       ES70 Serie A Enfermedades cardiovasculares
-## 52 2012 Por 100.000 habitantes       ES70 Serie A Enfermedades cardiovasculares
-## 53 2013 Por 100.000 habitantes       ES70 Serie A Enfermedades cardiovasculares
-## 54 2014 Por 100.000 habitantes       ES70 Serie A Enfermedades cardiovasculares
-## 55 2015 Por 100.000 habitantes       ES70 Serie A Enfermedades cardiovasculares
-## 56 2016 Por 100.000 habitantes       ES70 Serie A Enfermedades cardiovasculares
-## 57 2017 Por 100.000 habitantes       ES70 Serie A Enfermedades cardiovasculares
-## 58 2018 Por 100.000 habitantes       ES70 Serie A Enfermedades cardiovasculares
-## 59 2019 Por 100.000 habitantes       ES70 Serie A Enfermedades cardiovasculares
-## 60 2020 Por 100.000 habitantes       ES70 Serie A Enfermedades cardiovasculares
-## 61 2021 Por 100.000 habitantes       ES70 Serie A Enfermedades cardiovasculares
-##     Value
-## 2  255.85
-## 3  253.18
-## 4  261.08
-## 5  252.15
-## 6  252.70
-## 7  267.61
-## 8  257.87
-## 9  263.18
-## 10 258.64
-## 11 247.56
-## 12 253.09
-## 13 251.83
-## 50 162.63
-## 51 162.54
-## 52 165.71
-## 53 147.60
-## 54 164.65
-## 55 192.31
-## 56 198.02
-## 57 196.34
-## 58 212.40
-## 59 192.50
-## 60 201.24
-## 61 212.93</code></pre>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cargar la biblioteca ggplot2</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Resto de tu código</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>grafico <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(nueva_tabla_filtrada, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Value, <span class="at">fill =</span> Territorio)) <span class="sc">+</span></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span></span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Gráfico de barras por Territorio&quot;</span>,</span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Año&quot;</span>,</span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Valor&quot;</span>) <span class="sc">+</span></span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;ES&quot;</span> <span class="ot">=</span> <span class="st">&quot;red&quot;</span>, <span class="st">&quot;ES70&quot;</span> <span class="ot">=</span> <span class="st">&quot;green&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Muestra el gráfico</span></span>
-<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafico)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Leemos el archivo CSV indicando la ruta en la que se encuentra</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>datos <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;Excels/Cardiovascular.csv&quot;</span>, <span class="at">header =</span> <span class="cn">FALSE</span>, <span class="at">sep =</span> <span class="st">&quot;,&quot;</span>)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Transponemos los datos para organizarlos en un formato diferente</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>datos_transpuestos <span class="ot">&lt;-</span> <span class="fu">t</span>(datos)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculamos el número de filas y columnas que hay realmente en el archivo comprimido.</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>num_filas <span class="ot">&lt;-</span> <span class="fu">nrow</span>(datos)</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>num_columnas <span class="ot">&lt;-</span> <span class="fu">ncol</span>(datos)</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Posteriormente calculamos el num total de elementos y creamos un vextor con los datos.</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>nuevo_vector <span class="ot">&lt;-</span> <span class="fu">unlist</span>(datos_transpuestos)</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>orden_columnas <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span>num_columnas, <span class="at">each =</span> num_filas)</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>orden_filas <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span>num_filas, <span class="at">times =</span> num_columnas)</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>orden_final <span class="ot">&lt;-</span> <span class="fu">order</span>(orden_columnas, orden_filas)</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Creamos un nuevo data frame llamado &quot;nueva_tabla&quot; organizando un vector en una matriz con el número de columnas indicadas.</span></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>nueva_tabla <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">matrix</span>(nuevo_vector[orden_final], <span class="at">ncol =</span> num_columnas, <span class="at">byrow =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Asignamos los nombres de las columnas con la primera fila</span></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(nueva_tabla) <span class="ot">&lt;-</span> <span class="fu">as.character</span>(datos[<span class="dv">1</span>, ])</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Eliminamos la primera fila (que ahora es la cabecera de las columnas)</span></span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>nueva_tabla <span class="ot">&lt;-</span> nueva_tabla[<span class="sc">-</span><span class="dv">1</span>, ]</span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtramos las filas que tienen &quot;Serie A&quot; en la columna &quot;Serie&quot;, es decir, todas las de &quot;Enfermedades cardiovasculares&quot;.</span></span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a>nueva_tabla_filtrada <span class="ot">&lt;-</span> <span class="fu">subset</span>(nueva_tabla, nueva_tabla<span class="sc">$</span>Serie <span class="sc">==</span> <span class="st">&quot;Serie A&quot;</span>)</span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Finalmente mostramos el resultado.</span></span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(nueva_tabla_filtrada)</span></code></pre></div>
+<pre><code>##   Year                  Units Territorio   Serie            Tipo de enfermedad
+## 2 2010 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
+## 3 2011 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
+## 4 2012 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
+## 5 2013 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
+## 6 2014 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
+## 7 2015 Por 100.000 habitantes         ES Serie A Enfermedades cardiovasculares
+##    Value
+## 2 255.85
+## 3 253.18
+## 4 261.08
+## 5 252.15
+## 6 252.70
+## 7 267.61</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cargar la biblioteca ggplot2</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Resto de tu código</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>grafico <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(nueva_tabla_filtrada, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Value, <span class="at">fill =</span> Territorio)) <span class="sc">+</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Gráfico de barras por Territorio&quot;</span>,</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Año&quot;</span>,</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Valor&quot;</span>) <span class="sc">+</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;ES&quot;</span> <span class="ot">=</span> <span class="st">&quot;red&quot;</span>, <span class="st">&quot;ES70&quot;</span> <span class="ot">=</span> <span class="st">&quot;green&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Muestra el gráfico</span></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafico)</span></code></pre></div>
 <p><img src="Seminario_Salud_Dieta_files/figure-html5/unnamed-chunk-7-1.png" width="960" /></p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gráfica de barras</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>grafico <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(nueva_tabla_filtrada, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Value, <span class="at">fill =</span> Territorio)) <span class="sc">+</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Gráfico de barras por Territorio&quot;</span>,</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Año&quot;</span>,</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Valor&quot;</span>) <span class="sc">+</span></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;ES&quot;</span> <span class="ot">=</span> <span class="st">&quot;red&quot;</span>, <span class="st">&quot;ES70&quot;</span> <span class="ot">=</span> <span class="st">&quot;green&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Muestra el gráfico</span></span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafico)</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gráfica de barras</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>grafico <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(nueva_tabla_filtrada, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Value, <span class="at">fill =</span> Territorio)) <span class="sc">+</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Gráfico de barras por Territorio&quot;</span>,</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Año&quot;</span>,</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Valor&quot;</span>) <span class="sc">+</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;ES&quot;</span> <span class="ot">=</span> <span class="st">&quot;red&quot;</span>, <span class="st">&quot;ES70&quot;</span> <span class="ot">=</span> <span class="st">&quot;green&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Muestra el gráfico</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(grafico)</span></code></pre></div>
 <p><img src="Seminario_Salud_Dieta_files/figure-html5/unnamed-chunk-7-2.png" width="960" /></p>
+<<<<<<< HEAD
 <h4 id="conclusión-objetivo-3">Conclusión objetivo 3 📝</h4>
+=======
+<h4 id="conclusión-objetivo-3">Conclusión objetivo 3</h4>
+>>>>>>> 968489807ca50d4b59897e746c9dfc52448163c6
 <p>Como podemos observar en esta gráfica en la parte superior, la tasa
 de mortalidad por enfermedades cardiovasculares, cada año está subiendo
 más y más en “ES70”, es decir, las Islas Canarias, mientras que en “ES”
@@ -884,12 +883,32 @@ href="https://www.eldiario.es/canariasahora/canarias-opina/obesidad-problema-soc
 en el que índica que cada vez hay más y más obesidad entre la población
 canaria.</p>
 <h1 id="bibliografía">Bibliografía</h1>
+<<<<<<< HEAD
 <p>Y como todo buen proyecto, aquí os dejamos la bibliografía utilizada
 para la realización de este proyecto. En esta tabla podreis encontrar
 las beses de datos, webs y fuentes que hemos utilizado para realizar
 este proyecto.</p>
 <p><strong>La tabla en cuestioón</strong></p>
 <p>|||</p>
+=======
+<p>Aquí podeis encontrar las beses de datos que hemos utilizado para
+realizar este proyecto;</p>
+<ul>
+<li><p>texto[<a
+href="https://catalog.data.gov/dataset/?q=hypertension&amp;sort=views_recent+desc&amp;res_format=CSV&amp;ext_location=&amp;ext_bbox=&amp;ext_prev_extent=&amp;tags=hypertension"
+class="uri">https://catalog.data.gov/dataset/?q=hypertension&amp;sort=views_recent+desc&amp;res_format=CSV&amp;ext_location=&amp;ext_bbox=&amp;ext_prev_extent=&amp;tags=hypertension</a>]</p></li>
+<li><p>texto[<a href="https://www.niddk.nih.gov/"
+class="uri">https://www.niddk.nih.gov/</a>]</p></li>
+<li><p>texto[<a href="https://www.niddk.nih.gov/"
+class="uri">https://www.niddk.nih.gov/</a>]</p></li>
+<li><p>texto[<a href="https://www.data.gov/"
+class="uri">https://www.data.gov/</a>]</p></li>
+<li><p>texto[<a href="https://www.opendatasoft.com/"
+class="uri">https://www.opendatasoft.com/</a>]</p></li>
+<li><p>Texto[Url] dt pakage que se vea el codigo buscar codigo en
+ingles</p></li>
+</ul>
+>>>>>>> 968489807ca50d4b59897e746c9dfc52448163c6
 
 </main>
 
