@@ -34,11 +34,11 @@ Nos centraremos en **3 OBJETIVOS PRINCIPALES.**
 
 ### **Objetivo 2**
 
--   Relación entre la mortalidad por diabetes y cantidad de establecimientos de comida rápida.
+-   Relación entre mortalidad por diabetes, edad y raza/etnia.
 
 ### **Objetivo 3**
 
--   Comparar la mortalidad por enfermedades cardiovasculares entre la Peninsula y las islas canarias
+-   Comparar la mortalidad por enfermedades cardiovasculares entre la Peninsula y las islas canarias.
 
 ![💪](Fotos/DietaDeporte.jpg)
 
@@ -65,15 +65,19 @@ A la hora de revisar las graficas, os encontrareís con codigo como este para su
 
 ### **Explicación Objetivo 1**;
 
-En este primer objetivo...
+En este primer objetivo hemos trabajado en relación a la hipertensión y la diabetes tipo 2.
+
+Abarcando varios parametros los cuales hemos expresado individualmente en graficas conocidas como ***Boxplot***.
 
 ### **Explicación Objetivo 2**;
 
-Para este segundo objetivo hemos buscado en diferentes bases de datos las cuales nos pudieran proporcionar alguna información sobre si existe alguna relación entre la aparición y mortalidad por diabetes tipo 2 y la cantidad de establecimientos de *Fastfood* que encontramos. En este caso estos datos son del estado de Allegheny en E.E.U.U.
+Para este segundo objetivo hemos encontrado una posible relación entre la enfermedad conocida como diabetes tipo 2 y la raza a la que pertenecen los afectados. Ademas, hemos relacionado esto a la edad de las personas, ya que tenía cierta significancia en los datos.
 
 ### **Explicación objetivo 3**;
 
-Por ultimo, en este tercer objetivo hemos comparado la tasa de mortalidad por enfermedades cardiovasculares. Hemos comparado la tasa de mortalidad desde el año 2010 hasta el 2021, pero, hemos realizado la comparativa también entre la peninsula y las islas canarias.
+Por ultimo, en este tercer objetivo hemos comparado la tasa de mortalidad por enfermedades cardiovasculares.
+
+Hemos comparado la tasa de mortalidad desde el año 2010 hasta el 2021, pero, hemos realizado la comparativa también entre la peninsula y las islas canarias.
 
 ## Bibliografía [📰](https://emojipedia.org/shortcodes)
 
