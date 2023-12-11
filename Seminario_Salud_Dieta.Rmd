@@ -52,6 +52,10 @@ Para este primer objetivo hemos obtado por utilizar datos proporcionados por el 
 
 Aqui dejamos el **URL** al archivo **CSV** utilizado en este objetivo [CSV](https://catalog.data.gov/dataset/diabetes-hypertension-comorbidity)
 
+### Codigo tabla objetivo 1
+
+Aquí podeis ver el codigo empleado para importar y mostrar esta primera tabla;
+
 ```{r}
 #Primero procedemos a leer el archivo CSV con la posición del archivo, además indicamos que no tienen título las columnas y su separador es ";".
 datos <- read.csv("Excels/DiabetesHipertension.csv", header = FALSE, sep = ";")
@@ -82,6 +86,8 @@ nueva_tabla <- nueva_tabla[-1, ]
 head(nueva_tabla)
 ```
 
+Aquí esta el codigo que hemos utilizado para pasar los numeros de ***character*** a decimales de la tabla anterior;
+
 ```{r}
 # La tabla anterior estaba con datos "character" por los que los pasamos a datos numéricos para poder trabajar con ellos"
 copia_nueva_tabla <- as.data.frame(lapply(nueva_tabla, as.numeric))
@@ -89,7 +95,7 @@ copia_nueva_tabla <- as.data.frame(lapply(nueva_tabla, as.numeric))
 head(copia_nueva_tabla)
 ```
 
-#### Elaboración Boxplot 🛠️
+### Elaboración Boxplot 🛠️
 
 Para la elaboración de esta gráfica, entre ambos compañeros decidimos que la mejor idea podría ser crear una "Boxplot"(El Diagrama de Caja y bigotes es un tipo de gráfico que muestra un resumen de una gran cantidad de datos en cinco medidas descriptivas, además de intuir su morfología y simetría) para agrupar estos datos específicos. La idea nos vino de la asignatura de 2º: Bioestadísta.
 
@@ -112,6 +118,10 @@ Una vez obtenidos estos Boxplots de las diferentes columnas, podemos comprobar c
 
 Estos datos incluyen recuentos de muertes por raza (total, negros, blancos) por grupo de edad y causa de muerte por área censal agregada durante un período de cinco años (2014-18). Datos extraídos del Sistema Electrónico de Registro de Defunciones (EDRS) de Pensilvania con el siguiente descargo de responsabilidad. Nosotros hemos aislado los casos de muertes que nos interesan, es decir, diabetes, para así poder trabajar con ellos. Para acudir al enlace pulse [aquí](https://catalog.data.gov/dataset/allegheny-county-mortality-indicators).
 
+### Codigo tabla objetivo 2
+
+Aquí podeis ver el codigo empleado para importar y mostrar esta segunda tabla;
+
 ```{r}
 # Leemos el archivo CSV indicandos su ruta en el código.
 datos <- read.csv("Excels/mortality_county_all.csv", header = FALSE, sep = ",")
@@ -124,6 +134,10 @@ print(datos_filtrados)
 
 
 ```
+
+### Codigo grafica objetivo 2
+
+Aquí podeis ver la explicación y el codigo empleado para importar y mostrar esta segunda grafica;
 
 A continuación procedemos a usar una gráfica combinada de líneas y puntos para poder comprobar la tasa de mortalidad por diabetes según la raza (blancos y negros), a su vez que la comparamos con la edad de los fallecidos. Un punto a tener en cuenta cuando observamos esta gráfica es que el eje Y (Nº de muertes) no está ordenado por lo que sólo debemos fijarnos en las zonas donde se encuentran los púntos, haciendo referencia a los intervalos de edad ofrecidos por el CSV.
 
@@ -148,6 +162,10 @@ A partir de los datos gráficos obtenidos, es posible inferir una correlación e
 ### Tercer Objetivo 3️⃣
 
 A continuación procedemos a utlizar una gráfica de barras/columnas, en las que indicaremos de 2 colores (rojo y verde) cada lugar de origen (España e Islas Canarias). El eje de las X corresponde a los años trascurridos en los que se han recogido datos. El eje de las Y hace referencia a las cifras de fallecidos por enfermedades cardiovasculares.
+
+### Codigo tabla objetivo 3
+
+Aquí podeis ver el codigo empleado para importar y mostrar esta tercera tabla;
 
 ```{r}
 library(ggplot2)
@@ -185,6 +203,10 @@ head(nueva_tabla_filtrada)
 
 ```
 
+### Codigo grafica objetivo 3
+
+Aquí podeis ver el codigo empleado para importar y mostrar esta tercera y ultima grafica;
+
 ```{r}
 # Cargar la biblioteca ggplot2
 
@@ -211,9 +233,6 @@ grafico <- ggplot(nueva_tabla_filtrada, aes(x = Year, y = Value, fill = Territor
   scale_fill_manual(values = c("ES" = "red", "ES70" = "green")) +
   theme_minimal()
 
-# Muestra el gráfico
-print(grafico)
-
 ```
 
 #### Conclusión objetivo 3 📝
@@ -227,7 +246,7 @@ Y como todo buen proyecto, aquí os dejamos la bibliografía utilizada para la r
 **La tabla en cuestioón**
 
 | Información                     | Links                                                                                                          |
-|:---------------------------------------------|:-------------------------|
+|:--------------------------------|:---------------------------------------------------------------------------------------------------------------|
 | Cardiovascular                  | [Link](https://www3.gobiernodecanarias.org/aplicaciones/appsistac/ods/3-4-1/)                                  |
 | Diabetes e Hipertensión         | [Link](https://catalog.data.gov/dataset/diabetes-hypertension-comorbidity)                                     |
 | Fastfood                        | [Link](https://catalog.data.gov/dataset/allegheny-county-fast-food-establishments#sec-dates)                   |
